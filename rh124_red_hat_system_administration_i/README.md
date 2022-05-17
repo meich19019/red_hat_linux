@@ -1,4 +1,4 @@
-# [RH124 Red Hat System Administration I](/rh124_red_hat_system_administration_i/README.md)
+# RH124 Red Hat System Administration I
 ## [01 Getting Started with Red Hat Enterprise Linux](/rh124_red_hat_system_administration_i/01_getting_started_with_red_hat_enterprise_linux/README.md)
 ## [02 Accessing the Command Line](/rh124_red_hat_system_administration_i/02_accessing_the_command_line/README.md)
 ## [03 Managing Files From the Command Line](/rh124_red_hat_system_administration_i/03_managing_files_from_the_command_line/README.md)
