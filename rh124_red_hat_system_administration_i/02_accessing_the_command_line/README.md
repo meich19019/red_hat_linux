@@ -82,105 +82,113 @@ $ passwd #變更此帳號的密碼
 ---
 ## Executing Commands Using the Bash Shell
 ### Basic Command Syntax
-```bash
-$ whoami #查看當前使用者名稱
-```
-## Examples of Simple Commands
-```bash
-$ date #查看作業系統時間
-```
-```bash
-$ date -s #用字串設定作業系統時間
-```
-```bash
-$ date +<FORMAT> #指定格式(<FORMAT>)查看作業系統時間
-```
-```bash
-$ clock -w #將作業系統時間同步回RTC
-```
-```bash
-$ passwd #變更此帳號的密碼
-```
-```bash
-$ file <FILE> #查看檔案(<FILE>)格式
-```
+1. whoami
+    ```bash
+    $ whoami #查看當前使用者名稱
+    ```
+### Examples of Simple Commands
+1. date
+    ```bash
+    $ date #查看作業系統時間
+    ```
+    ```bash
+    $ date -s #用字串設定作業系統時間
+    ```
+    ```bash
+    $ date +<FORMAT> #指定格式(<FORMAT>)查看作業系統時間
+    ```
+    ```bash
+    $ clock -w #將作業系統時間同步回RTC
+    ```
+2. passwd
+    ```bash
+    $ passwd #變更此帳號的密碼
+    ```
+3. file
+    ```bash
+    $ file <FILE> #查看檔案(<FILE>)格式
+    ```
 ### Viewing the Contents of Files
-```bash
-$ ls <PATH> #查看路徑(<PATH>)下檔案名稱
-```
-```bash
-$ ls -l <PATH> #查看路徑(<PATH>)下檔案名稱及詳細資訊
-```
-```bash
-$ ls -l <PATH> | less #查看路徑(<PATH>)下檔案名稱及詳細資訊並可上下瀏覽
-```
-```bash
-$ ls -a <PATH> #查看路徑(<PATH>)下包含隱藏檔案的所有檔案名稱
-```
-```bash
-$ cat <FILE> #查看檔案(<FILE>)內容
-```
-```bash
-$ cat <FILE1> <FILE2> #查看多個檔案(<FILE1>, <FILE2>)內容
-```
-```bash
-$ cat -A <FILE> #查看檔案(<FILE>)內容所有一般及控制字元
-```
-```bash
-$ unix2dos #Unix字元轉Windows字元
-```
-```bash
-$ dos2unix #Windows字元轉Unix字元
-```
-```bash
-$ split -b 50M boot.iso file_ #將檔案(boot.iso)切割成多個檔案(file_1, file_2, ...)
-```
-```bash
-$ cat file_* > boot.iso #將多個檔案(file_1, file_2, ...)重組成檔案(boot.iso)
-```
-```bash
-$ head <FILE> #查看檔案(<FILE>)內容前10行
-```
-```bash
-$ tail <FILE> #查看檔案(<FILE>)內容後10行
-```
-```bash
-$ tail -n <NUMBER> <FILE> #查看檔案(<FILE>)內容後(<NUMBER>)行
-```
-```bash
-$ tail -f <FILE> #持續查看檔案(<FILE>)內容後10行
-```
-```bash
-$ wc <FILE> #查看檔案(<FILE>)行數、詞數、字數
-```
-```bash
-$ wc <FILE1> <FILE2> #查看多個檔案(<FILE1>, <FILE2>)行數、詞數、字數、總計
-```
-```bash
-$ wc -l <FILE> #查看檔案(<FILE>)行數
-```
-```bash
-$ wc -w <FILE> #查看檔案(<FILE>)詞數
-```
-```bash
-$ wc -c <FILE> #查看檔案(<FILE>)字數
-```
+1. ls
+    ```bash
+    $ ls <PATH> #查看路徑(<PATH>)下檔案名稱
+    ```
+    ```bash
+    $ ls -l <PATH> #查看路徑(<PATH>)下檔案名稱及詳細資訊
+    ```
+    ```bash
+    $ ls -l <PATH> | less #查看路徑(<PATH>)下檔案名稱及詳細資訊並可上下瀏覽
+    ```
+    ```bash
+    $ ls -a <PATH> #查看路徑(<PATH>)下包含隱藏檔案的所有檔案名稱
+    ```
+2. cat
+    ```bash
+    $ cat <FILE> #查看檔案(<FILE>)內容
+    ```
+    ```bash
+    $ cat <FILE1> <FILE2> #查看多個檔案(<FILE1>, <FILE2>)內容
+    ```
+    ```bash
+    $ cat -A <FILE> #查看檔案(<FILE>)內容所有一般及控制字元
+    ```
+    ```bash
+    $ unix2dos #Unix字元轉Windows字元
+    ```
+    ```bash
+    $ dos2unix #Windows字元轉Unix字元
+    ```
+    ```bash
+    $ split -b 50M boot.iso file_ #將檔案(boot.iso)切割成多個檔案(file_1, file_2, ...)
+    ```
+    ```bash
+    $ cat file_* > boot.iso #將多個檔案(file_1, file_2, ...)重組成檔案(boot.iso)
+    ```
+3. head and tail
+    ```bash
+    $ head <FILE> #查看檔案(<FILE>)內容前10行
+    ```
+    ```bash
+    $ tail <FILE> #查看檔案(<FILE>)內容後10行
+    ```
+    ```bash
+    $ tail -n <NUMBER> <FILE> #查看檔案(<FILE>)內容後(<NUMBER>)行
+    ```
+    ```bash
+    $ tail -f <FILE> #持續查看檔案(<FILE>)內容後10行
+    ```
+4. wc
+    ```bash
+    $ wc <FILE> #查看檔案(<FILE>)行數、詞數、字數
+    ```
+    ```bash
+    $ wc <FILE1> <FILE2> #查看多個檔案(<FILE1>, <FILE2>)行數、詞數、字數、總計
+    ```
+    ```bash
+    $ wc -l <FILE> #查看檔案(<FILE>)行數
+    ```
+    ```bash
+    $ wc -w <FILE> #查看檔案(<FILE>)詞數
+    ```
+    ```bash
+    $ wc -c <FILE> #查看檔案(<FILE>)字數
+    ```
 ### Tab Completion
 1. BASH Completion  
     增強BASH自動補齊功能。
 ### Continuing a Long Command on Another Line
 ### Command History
-1. History  
+1. history  
     查看曾經下達過的命令，命令歷史紀錄存放在各使用者的家目錄下`~/.bash_history`。
-```bash
-$ history #查看命令歷史紀錄
-```
-```bash
-$ !<COMMAND> #重下此命令(<COMMAND>)在命令歷史紀錄中最近一次的命令
-```
-```bash
-$ !<NUMBER> #重下此數字(<NUMBER>)在命令歷史紀錄中的命令
-```
+    ```bash
+    $ history #查看命令歷史紀錄
+    ```
+    ```bash
+    $ !<COMMAND> #重下此命令(<COMMAND>)在命令歷史紀錄中最近一次的命令
+    ```
+    ```bash
+    $ !<NUMBER> #重下此數字(<NUMBER>)在命令歷史紀錄中的命令
+    ```
 ### Editing the Command Line
 ---
 ## Return to [RH124 Red Hat System Administration I](/rh124_red_hat_system_administration_i/README.md)
