@@ -7,19 +7,23 @@
     Red Hat Enterprise Linux的預設使用者shell為BASH，BASH是基於Bourne Shell (SH)改進而來。
 3. Shell prompt 命令提示字元  
     顯示一段字串等待使用者的命令，命令提示字元可依使用者需求自行修改，預設一般使用者命令提示字元為`[user@host ~]$`，預設超級使用者命令提示字元為`[root@host ~]#`。
-```bash
-$ hostname #查看完整主機名稱
-```
-```bash
-$ hostname -s #查看簡短主機名稱
-```
-```bash
-$ man #查詢指令，常見符號有[]選項、<>必填、...可多個、|選項
-```
+4. hostname
+    ```bash
+    $ hostname #查看完整主機名稱
+    ```
+    ```bash
+    $ hostname -s #查看簡短主機名稱
+    ```
+5. Manual page (man)
+    ```bash
+    $ man #查詢指令，常見符號有[]選項、<>必填、...可多個、|選項
+    ```
 ### Shell Basics
-```bash
-$ usermod -L user1 #鎖定帳號(user1)
-```
+1. User Modify (usermod)
+    ```bash
+    $ usermod -L <USER> #鎖定帳號(<USER>)
+    $ usermod -L user1
+    ```
 ### Logging in to a Local Computer
 1. Terminal 終端機  
     用來讓使用者輸入資料，及顯示其計算結果的一台裝置。
@@ -34,26 +38,28 @@ $ usermod -L user1 #鎖定帳號(user1)
 ### Logging in over the Network
 1. Secure Shell (SSH) 安全外殼協定  
     一種加密的網路傳輸協定，SSH通過在網路中建立安全隧道來實現SSH客戶端與伺服器之間的連接。
+    ```bash
+    $ ssh <REMOTE_USER>@<REMOTE_HOST> #透過SSH以使用者(<REMOTE_USER>)遠端登入系統(<REMOTE_HOST>)
+    ```
+    ```bash
+    $ ssh -i <PRIVATE_KEY> <REMOTE_USER>@<REMOTE_HOST> #透過SSH指定私密金鑰(<PRIVATE_KEY>)以使用者(<REMOTE_USER>)遠端登入系統(<REMOTE_HOST>)
+    $ ssh -i mylab.pem student@workstation
+    ```
 2. OpenBSD Secure Shell (OpenSSH)  
     使用SSH透過計算機網路加密通訊的實現。
 3. SSH Tunnel SSH隧道  
     利用SSH協定來建立這個隧道通訊傳送資料。
-```bash
-$ ssh remoteuser@remotehost #透過SSH以使用者(remoteuser)遠端登入系統(remotehost)
-```
 4. Public key authentication 公開金鑰認證  
     使用這種身份驗證方法，使用者有一個包含私密金鑰的特殊身份文件，相當於密碼，並且經過加密。而在遠端伺服器上的帳號配置有相對應的公開金鑰，該公開金鑰不必加密。登入時，使用者設置SSH提供私密金鑰，如果此私密金鑰有對應的公開金鑰安裝在遠端伺服器上的該帳號中，使用者將在不被要求輸入密碼的情況下登入。
 5. Private key 私密金鑰  
     私密金鑰不可以公開，必須由使用者自行嚴格秘密保管，絕不透過任何途徑向任何人提供，也不會透露給被信任的要通訊的另一方。
 6. Public key 公開金鑰  
     公開金鑰可以公開，可任意向外發佈。
-```bash
-$ ssh -i mylab.pem remoteuser@remotehost #透過SSH指定私密金鑰(mylab.pem)以使用者(remoteuser)遠端登入系統(remotehost)
-```
 ### Logging Out
-```bash
-$ exit #結束遠端連線登出系統
-```
+1. exit
+    ```bash
+    $ exit #結束遠端連線登出系統
+    ```
 ---
 ## Accessing the Command Line Using the Desktop
 ### Introduction to the GNOME Desktop Environment
@@ -67,27 +73,32 @@ $ exit #結束遠端連線登出系統
 ### Starting a Terminal
 ### Locking the Screen or Logging Out
 ### Powering off or Rebooting the System
-```bash
-$ clear #清空終端機
-```
-```bash
-$ useradd user01 #建立帳號(user1)
-```
-```bash
-$ passwd user01 #對帳號(user1)建立密碼或變更密碼
-```
-```bash
-$ passwd #變更此帳號的密碼
-```
+1. Clear (clear)
+    ```bash
+    $ clear #清空終端機
+    ```
+2. User Add (useradd)
+    ```bash
+    $ useradd <USER> #建立帳號(<USER>)
+    $ useradd user1
+    ```
+3. Password (passwd)
+    ```bash
+    $ passwd <USER> #對帳號(<USER>)建立密碼或變更密碼
+    $ passwd user1
+    ```
+    ```bash
+    $ passwd #變更此帳號的密碼
+    ```
 ---
 ## Executing Commands Using the Bash Shell
 ### Basic Command Syntax
-1. whoami
+1. Who am I (whoami)
     ```bash
     $ whoami #查看當前使用者名稱
     ```
 ### Examples of Simple Commands
-1. date
+1. Date (date)
     ```bash
     $ date #查看作業系統時間
     ```
@@ -100,16 +111,16 @@ $ passwd #變更此帳號的密碼
     ```bash
     $ clock -w #將作業系統時間同步回RTC
     ```
-2. passwd
+2. Password (passwd)
     ```bash
     $ passwd #變更此帳號的密碼
     ```
-3. file
+3. File (file)
     ```bash
     $ file <FILE> #查看檔案(<FILE>)格式
     ```
 ### Viewing the Contents of Files
-1. ls
+1. List (ls)
     ```bash
     $ ls <PATH> #查看路徑(<PATH>)下檔案名稱
     ```
@@ -122,12 +133,12 @@ $ passwd #變更此帳號的密碼
     ```bash
     $ ls -a <PATH> #查看路徑(<PATH>)下包含隱藏檔案的所有檔案名稱
     ```
-2. cat
+2. Concatenate (cat)
     ```bash
     $ cat <FILE> #查看檔案(<FILE>)內容
     ```
     ```bash
-    $ cat <FILE1> <FILE2> #查看多個檔案(<FILE1>, <FILE2>)內容
+    $ cat <FILE1> <FILE2> ... #查看多個檔案(<FILE1>, <FILE2>, ...)內容
     ```
     ```bash
     $ cat -A <FILE> #查看檔案(<FILE>)內容所有一般及控制字元
@@ -139,12 +150,14 @@ $ passwd #變更此帳號的密碼
     $ dos2unix #Windows字元轉Unix字元
     ```
     ```bash
-    $ split -b 50M boot.iso file_ #將檔案(boot.iso)切割成多個檔案(file_1, file_2, ...)
+    $ split -b <BLOCK_SIZE> <SOURCE_FILE> <TARGET_FILE_NAME> #將檔案(<SOURCE_FILE>)切割成多個檔案(<TARGET_FILE_NAME>1, <TARGET_FILE_NAME>2, ...)
+    $ split -b 50M boot.iso file_ 
     ```
     ```bash
-    $ cat file_* > boot.iso #將多個檔案(file_1, file_2, ...)重組成檔案(boot.iso)
+    $ cat <SOURCE_FILE1> <SOURCE_FILE2> ... > <TARGET_FILE> #將多個檔案(<SOURCE_FILE1>, <SOURCE_FILE2>, ...)重組成檔案(TARGET_FILE)
+    $ cat file_* > boot.iso
     ```
-3. head and tail
+3. Head (head) and Tail (tail)
     ```bash
     $ head <FILE> #查看檔案(<FILE>)內容前10行
     ```
@@ -157,12 +170,12 @@ $ passwd #變更此帳號的密碼
     ```bash
     $ tail -f <FILE> #持續查看檔案(<FILE>)內容後10行
     ```
-4. wc
+4. Word Count (wc)
     ```bash
     $ wc <FILE> #查看檔案(<FILE>)行數、詞數、字數
     ```
     ```bash
-    $ wc <FILE1> <FILE2> #查看多個檔案(<FILE1>, <FILE2>)行數、詞數、字數、總計
+    $ wc <FILE1> <FILE2> ... #查看多個檔案(<FILE1>, <FILE2>, ...)行數、詞數、字數、總計
     ```
     ```bash
     $ wc -l <FILE> #查看檔案(<FILE>)行數
@@ -178,7 +191,7 @@ $ passwd #變更此帳號的密碼
     增強BASH自動補齊功能。
 ### Continuing a Long Command on Another Line
 ### Command History
-1. history  
+1. History (history)  
     查看曾經下達過的命令，命令歷史紀錄存放在各使用者的家目錄下`~/.bash_history`。
     ```bash
     $ history #查看命令歷史紀錄
