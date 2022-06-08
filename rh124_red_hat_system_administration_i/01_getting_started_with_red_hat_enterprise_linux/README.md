@@ -29,5 +29,4 @@
 4. Rocky Linux  
     Rocky Linux旨在成為一個使用紅帽企業Red Hat Enterprise Linux作業系統原始碼的完整的下游二進位相容版本。
 ### Trying out Red Hat Enterprise Linux
----
 ## Return to [RH124 Red Hat System Administration I](/rh124_red_hat_system_administration_i/README.md)

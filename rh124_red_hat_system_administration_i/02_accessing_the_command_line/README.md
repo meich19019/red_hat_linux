@@ -14,9 +14,9 @@
     ```bash
     $ hostname -s #查看簡短主機名稱
     ```
-5. Manual page (man)
+5. Manual pages (man)
     ```bash
-    $ man #查詢指令，常見符號有[]選項、<>必填、...可多個、|選項
+    $ man <COMMAND> #查看指令(<COMMAND>)詳細資訊，常見符號有[]選項、<>必填、...可多個、|選項
     ```
 ### Shell Basics
 1. User Modify (usermod)
@@ -60,7 +60,6 @@
     ```bash
     $ exit #結束遠端連線登出系統
     ```
----
 ## Accessing the Command Line Using the Desktop
 ### Introduction to the GNOME Desktop Environment
 1. Desktop environment 桌面環境  
@@ -90,7 +89,6 @@
     ```bash
     $ passwd #變更此帳號的密碼
     ```
----
 ## Executing Commands Using the Bash Shell
 ### Basic Command Syntax
 1. Who am I (whoami)
@@ -145,15 +143,11 @@
     ```
     ```bash
     $ unix2dos #Unix字元轉Windows字元
-    ```
-    ```bash
     $ dos2unix #Windows字元轉Unix字元
     ```
     ```bash
     $ split -b <BLOCK_SIZE> <SOURCE_FILE> <TARGET_FILE_NAME> #將檔案(<SOURCE_FILE>)切割成多個檔案(<TARGET_FILE_NAME>1, <TARGET_FILE_NAME>2, ...)
     $ split -b 50M boot.iso file_ 
-    ```
-    ```bash
     $ cat <SOURCE_FILE1> <SOURCE_FILE2> ... > <TARGET_FILE> #將多個檔案(<SOURCE_FILE1>, <SOURCE_FILE2>, ...)重組成檔案(TARGET_FILE)
     $ cat file_* > boot.iso
     ```
@@ -195,13 +189,8 @@
     查看曾經下達過的命令，命令歷史紀錄存放在各使用者的家目錄下`~/.bash_history`。
     ```bash
     $ history #查看命令歷史紀錄
-    ```
-    ```bash
     $ !<COMMAND> #重下此命令(<COMMAND>)在命令歷史紀錄中最近一次的命令
-    ```
-    ```bash
     $ !<NUMBER> #重下此數字(<NUMBER>)在命令歷史紀錄中的命令
     ```
 ### Editing the Command Line
----
 ## Return to [RH124 Red Hat System Administration I](/rh124_red_hat_system_administration_i/README.md)

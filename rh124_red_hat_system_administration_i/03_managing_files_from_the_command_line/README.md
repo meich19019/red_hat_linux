@@ -3,8 +3,32 @@
 ### The File-system Hierarchy
 1. File-system hierarchy 檔案系統階層  
     定義了Linux作業系統中的主要目錄及目錄內容。
+    ![Significant file-system directories in Red Hat Enterprise Linux 8](p48_significant_file-system_directories_in_red_hat_enterprise_linux_8.png "Significant file-system directories in Red Hat Enterprise Linux 8")
 2. Home directory 家目錄  
     在多使用者作業系統上包含該系統特定使用者檔案的檔案系統目錄。
+3. Important Red Hat Enterprise Linux Directories
+    1. `/usr`  
+        安裝的軟體、共享的套件，包含檔案和唯讀程式資料。
+    2. `/etc`  
+        特定系統設定檔。
+    3. `/var`  
+        經常異動的的檔案。
+    4. `/run`
+        自上次開機以來啟動流程的即時資料，屬於系統暫存資料，對應記憶體。
+    5. `/home`  
+        各使用者的家目錄，儲存使用者個人資料與設定檔。
+    6. `/root`  
+        超級使用者(root)的家目錄。
+    7. `/tmp`  
+        全域可寫的暫存檔案。
+    8. `/boot`  
+        啟動開機流程所需的檔案。
+    9. `/dev`  
+        包含系統用來訪問硬體的特殊裝置文件，屬於系統暫存資料，對應記憶體。
+    10. `/proc`  
+        屬於系統暫存資料，對應記憶體。
+    11. `/sys`  
+        屬於系統暫存資料，對應記憶體。
 ## Specifying Files by Name
 ### Absolute Paths and Relative Paths
 1. Absolute Paths 絕對路徑  
@@ -66,6 +90,7 @@
 4. Index node (inode)  
     在許多類Unix檔案系統中的一種資料結構，用於描述檔案系統物件。
 5. List (ls)
+    ![List](p57_list.png "List")
     ```bash
     $ ls <PATH> #查看路徑(<PATH>)下檔案名稱
     ```
@@ -146,18 +171,20 @@
     檔案系統中的多個檔案平等地共享同一個檔案儲存單元，硬連結必須在同一個檔案系統中。
 2. Soft Link (Symbolic Link) 軟連結
     以絕對路徑或者相對路徑的形式指向其它檔案或者目錄的參照。
-3. Link (ln)
+3. Hard Link and Soft Link
+    ![Hard Link and Soft Link](p78_hard_link_and_soft_link.png "Hard Link and Soft Link")
+4. Link (ln)
     ```bash
     $ ln <SOURCE_FILE> <TARGET_FILE> #建立來源檔案(<SOURCE_FILE>)的目標檔案(<TARGET_FILE>)硬連結
     ```
     ```bash
     $ ln -s <SOURCE_PATH> <TARGET_PATH> #建立來源路徑(<SOURCE_PATH>)的目標路徑(<TARGET_PATH>)軟連結
     ```
-4. Disk Free (df)
+5. Disk Free (df)
     ```bash
     $ df #查看檔案系統的可用磁碟空間
     ```
-5. Change Directory (cd)
+6. Change Directory (cd)
     ```bash
     $ cd -P <DIRECTORY> #改變工作目錄至指定目錄(<DIRECTORY>)，當指定目錄為Soft Link，則改變工作目錄至指定目錄的實際目錄
     ```
