@@ -145,6 +145,7 @@
     $ unix2dos #Unix字元轉Windows字元
     $ dos2unix #Windows字元轉Unix字元
     ```
+3. Split and Concatenate
     ```bash
     $ split -b <BLOCK_SIZE> <SOURCE_FILE> <TARGET_FILE_NAME> #將檔案(<SOURCE_FILE>)切割成多個檔案(<TARGET_FILE_NAME>1, <TARGET_FILE_NAME>2, ...)
     $ split -b 50M boot.iso file_ 
