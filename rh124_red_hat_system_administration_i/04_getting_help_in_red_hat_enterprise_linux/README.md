@@ -19,21 +19,21 @@
 ### Navigate and Search Man Pages
 1. Navigating Man Pages
     1. `Space`  
-    向下捲動一個視窗。
+        向下捲動一個視窗。
     2. `b`  
-    向上捲動一個視窗。
+        向上捲動一個視窗。
     3. `g`  
-    到手冊頁面開頭。
+        移至頁首。
     4. `G`  
-    到手冊頁面結尾。
+        移至頁尾。
     5. `/<STRING>`  
-    向下查詢字串`<STRING>`。
+        向下查詢字串(`<STRING>`)。
     6. `n`  
-    向下查看查詢結果。
+        向下查看查詢結果。
     7. `N`  
-    向上查看查詢結果。
+        向上查看查詢結果。
     8. `q`  
-    離開手冊頁面。
+        離開。
 ### Searching for man pages by keyword
 1. Searching for man pages by keyword
     ```bash
@@ -53,11 +53,11 @@
 ### Comparing GNU Info and Man Page Navigation
 1. Navigating Pinfo
     1. `Space`  
-    向下捲動一個視窗。
+        向下捲動一個視窗。
     2. `b`  
-    向上捲動一個視窗。
-    5. `/<STRING>`  
-    向下查詢字串`<STRING>`。
-    8. `q`  
-    離開手冊頁面。
+        向上捲動一個視窗。
+    3. `/<STRING>`  
+        向下查詢字串(`<STRING>`)。
+    4. `q`  
+        離開。
 ## Return to [RH124 Red Hat System Administration I](/rh124_red_hat_system_administration_i/README.md)

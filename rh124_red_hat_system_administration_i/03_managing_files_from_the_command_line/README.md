@@ -241,8 +241,8 @@
     $ USERNAME=operator #指定變數(USERNAME)的值(operator)
     ```
     ```bash
-    $ echo ${<VARIABLE_NAME>} #顯示取出變數(<VARIABLE_NAME>)的值
-    $ echo ${USERNAME} #顯示取出變數(USERNAME)的值
+    $ echo ${<VARIABLE_NAME>} #顯示變數(<VARIABLE_NAME>)的值
+    $ echo ${USERNAME} #顯示變數(USERNAME)的值
     ```
 8. Command Substitution
     ```bash
@@ -256,12 +256,12 @@
     ```
 10. Protecting Arguments from Expansion
     ```bash
-    $ echo ${HOME} #顯示命令(/home/meich)
-    $ echo \${HOME} #顯示跳脫字元命令(${HOME})
+    $ echo ${HOME} #顯示變數(HOME)的值
+    $ echo \${HOME} #因跳脫字元顯示變數名稱(${HOME})
     ```
     ```bash
     $ echo file{1..3}, ${HOME}, $(hostname -s) #顯示命令(file1, file2, file3, /home/meich, meich-ubuntu)
-    $ echo "file{1..3}, ${HOME}, $(hostname -s)" #顯示雙引號命令(file{1..3}, /home/meich, meich-ubuntu)
-    $ echo 'file{1..3}, ${HOME}, $(hostname -s)' #顯示單引號命令(file{1..3}, ${HOME}, $(hostname -s))
+    $ echo "file{1..3}, ${HOME}, $(hostname -s)" #因雙引號顯示命令(file{1..3}, /home/meich, meich-ubuntu)
+    $ echo 'file{1..3}, ${HOME}, $(hostname -s)' #因單引號顯示命令(file{1..3}, ${HOME}, $(hostname -s))
     ```
 ## Return to [RH124 Red Hat System Administration I](/rh124_red_hat_system_administration_i/README.md)
