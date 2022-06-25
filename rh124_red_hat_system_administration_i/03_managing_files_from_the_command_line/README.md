@@ -90,66 +90,91 @@
 4. Index node (inode)  
     在許多類Unix檔案系統中的一種資料結構，用於描述檔案系統物件。
 5. List (ls)
-    ![List](p57_list.png "List")
+    ```bash
+    drwxr-xr-x. 2 user user 4096 Feb  7 14:02 Desktop
+    12        3 4 5    6    7    8            9
+    ```
+    1. 種類
+        1. 一般的檔案 (-)
+        2. 目錄 (d)
+        3. Soft Link (l)
+        4. 有檔案系統設備檔 (b)
+        5. 無檔案系統設備檔 (c)
+        6. Unix Domain Socket (s)
+        7. Pipeline (p)
+    2. 存取權限
+    3. ACL權限
+        1. 有 (+)
+        2. 無 (.)
+    4. 數量
+        1. 檔案
+            Hard Link數量
+        2. 目錄
+            目錄下的目錄數量
+    5. 所屬使用者
+    6. 所屬群組
+    7. 大小
+    8. Inode的Modify Time
+    9. 名稱
     ```bash
     $ ls #查看工作目錄下檔案名稱
     ```
     ```bash
-    $ ls <PATH> #查看路徑(<PATH>)下檔案名稱
+    $ ls <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱
     ```
     ```bash
-    $ ls -l <PATH> #查看路徑(<PATH>)下檔案名稱及詳細資訊
+    $ ls -l <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱及詳細資訊
     ```
     ```bash
-    $ ls -l <PATH> | less #查看路徑(<PATH>)下檔案名稱及詳細資訊並可上下瀏覽
+    $ ls -l <FILE|DIRECTORY> | less #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱及詳細資訊並可上下瀏覽
     ```
     ```bash
-    $ ls -a <PATH> #查看路徑(<PATH>)下包含隱藏檔案的所有檔案名稱
+    $ ls -a <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下包含隱藏檔案的所有檔案或目錄名稱
     ```
     ```bash
-    $ ls -i <PATH> #查看路徑(<PATH>)下檔案名稱及inode編號
+    $ ls -i <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱及inode編號
     ```
     ```bash
-    $ ls -R <PATH> #查看路徑(<PATH>)下檔案及所有子目錄檔案名稱
+    $ ls -R <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄及所有子目錄檔案或目錄名稱
     ```
 ## Managing Files Using Command-line Tools
 ### Command-line File Management
-1. Make Directory (mkdir)
+1. Make directory (mkdir)
     ```bash
     $ mkdir <DIRECTORY> #建立日錄(<DIRECTORY>)
     ```
     ```bash
-    $ mkdir -p <PATH> #建立路徑(<PATH>)上所有目錄
+    $ mkdir -p <DIRECTORY> #建立日錄(<DIRECTORY>)路徑所有目錄
     ```
     ```bash
     $ mkdir <DIRECTORY1> <DIRECTORY2> #建立多個日錄(<DIRECTORY>)
     ```
 2. Copy (cp)
     ```bash
-    $ cp <SOURCE_FILE> <TARGET_PATH> #複製來源檔案(<SOURCE_FILE>)至目標路徑(<TARGET_PATH>)
+    $ cp <SOURCE_FILE> <FILE|DIRECTORY> #複製來源檔案(<SOURCE_FILE>)至目標檔案或目錄(<FILE|DIRECTORY>)
     ```
     ```bash
-    $ cp <SOURCE_FILE1> <SOURCE_FILE2> ... <TARGET_DIRECTORY> #複製多個來源檔案(<SOURCE_FILE1>, <SOURCE_FILE2>, ...)至目標目錄(<TARGET_DIRECTORY>)
+    $ cp <SOURCE_FILE1> <SOURCE_FILE2> ... <DIRECTORY> #複製多個來源檔案(<SOURCE_FILE1>, <SOURCE_FILE2>, ...)至目標目錄(<DIRECTORY>)
     ```
     ```bash
-    $ cp -r <SOURCE_DIRECTORY> <TARGET_DIRECTORY> #複製來源目錄(<SOURCE_DIRECTORY>)及所有子目錄檔案至目標目錄(<TARGET_DIRECTORY>)
+    $ cp -r <SOURCE_DIRECTORY> <DIRECTORY> #複製來源目錄(<SOURCE_DIRECTORY>)及所有子目錄檔案或目錄至目標目錄(<DIRECTORY>)
     ```
     ```bash
-    $ cp -p <SOURCE_FILE> <TARGET_PATH> #複製來源檔案(<SOURCE_FILE>)並保留檔案原始屬性至目標路徑(<TARGET_PATH>)
+    $ cp -p <SOURCE_FILE> <FILE|DIRECTORY> #複製來源檔案(<SOURCE_FILE>)並保留檔案原始屬性至目標檔案或目錄(<FILE|DIRECTORY>)
     ```
     ```bash
-    $ cp -d <SOURCE_FILE> <TARGET_PATH> #複製來源檔案(<SOURCE_FILE>)並保留Soft Link至目標路徑(<TARGET_PATH>)
+    $ cp -d <SOURCE_FILE> <FILE|DIRECTORY> #複製來源檔案(<SOURCE_FILE>)並保留Soft Link至目標檔案或目錄(<FILE|DIRECTORY>)
     ```
     ```bash
-    $ cp -a <SOURCE_DIRECTORY> <TARGET_DIRECTORY> #複製來源目錄(<SOURCE_DIRECTORY>)及所有子目錄檔案、保留檔案原始屬性、保留Soft Link至目標目錄(<TARGET_DIRECTORY>)
-    $ cp -r -p -d <SOURCE_DIRECTORY> <TARGET_DIRECTORY>
+    $ cp -a <SOURCE_DIRECTORY> <DIRECTORY> #複製來源目錄(<SOURCE_DIRECTORY>)及所有子目錄檔案、保留檔案原始屬性、保留Soft Link至目標目錄(<DIRECTORY>)
+    $ cp -r -p -d <SOURCE_DIRECTORY> <DIRECTORY>
     ```
 3. Move (mv)
     ```bash
-    $ mv <SOURCE_PATH> <TARGET_PATH> #當來源路徑與目標路徑相同，重新命名來源路徑名稱(<SOURCE_PATH>)為目標路徑名稱(<TARGET_PATH>)
+    $ mv <SOURCE_FILE|SOURCE_DIRECTORY> <FILE|DIRECTORY> #當來源檔案或目錄與目標檔案或目錄相同，重新命名來源檔案或目錄(<SOURCE_FILE|SOURCE_DIRECTORY>)名稱為目標檔案或目錄(<FILE|DIRECTORY>)名稱
     ```
     ```bash
-    $ mv <SOURCE_PATH> <TARGET_DIRECTORY> #當來源路徑與目標目錄不同，移動來源路徑(<SOURCE_PATH>)至目標目錄(<TARGET_DIRECTORY>)
+    $ mv <SOURCE_FILE|SOURCE_DIRECTORY> <DIRECTORY> #當來源檔案或目錄與目標目錄不同，移動來源檔案或目錄(<SOURCE_FILE|SOURCE_DIRECTORY>)至目標目錄(<DIRECTORY>)
     ```
 4. Remove (rm)
     ```bash
@@ -164,7 +189,7 @@
     ```bash
     $ rm -r <DIRECTORY> #移除目錄(<DIRECTORY>)及所有子目錄檔案
     ```
-5. Remove Directory (rmdir)
+5. Remove directory (rmdir)
     ```bash
     $ rmdir <DIRECTORY> #移除空目錄(<DIRECTORY>)
     ```
@@ -178,10 +203,10 @@
     ![Hard Link and Soft Link](p78_hard_link_and_soft_link.png "Hard Link and Soft Link")
 4. Link (ln)
     ```bash
-    $ ln <SOURCE_FILE> <TARGET_FILE> #建立來源檔案(<SOURCE_FILE>)的目標檔案(<TARGET_FILE>)硬連結
+    $ ln <SOURCE_FILE> <FILE> #建立來源檔案(<SOURCE_FILE>)的目標檔案(<FILE>)硬連結
     ```
     ```bash
-    $ ln -s <SOURCE_PATH> <TARGET_PATH> #建立來源路徑(<SOURCE_PATH>)的目標路徑(<TARGET_PATH>)軟連結
+    $ ln -s <SOURCE_FILE|SOURCE_DIRECTORY> <FILE|DIRECTORY> #建立來源檔案或目錄(<SOURCE_FILE|SOURCE_DIRECTORY>)的目標檔案或目錄(<FILE|DIRECTORY>)軟連結
     ```
 5. Disk Free (df)
     ```bash

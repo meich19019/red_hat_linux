@@ -17,16 +17,16 @@
     $ ls #查看工作目錄下檔案名稱
     ```
     ```bash
-    $ ls <PATH> #查看路徑(<PATH>)下檔案名稱
+    $ ls <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱
     ```
     ```bash
-    $ ls -l <PATH> #查看路徑(<PATH>)下檔案名稱及詳細資訊
+    $ ls -l <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱及詳細資訊
     ```
     ```bash
-    $ ls -d <PATH> #查看路徑(<PATH>)本身名稱
+    $ ls -d <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)本身名稱
     ```
     ```bash
-    $ ls -ld <PATH> #查看路徑(<PATH>)本身名稱及詳細資訊
+    $ ls -ld <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)本身名稱及詳細資訊
     ```
 4. Process Status (ps)
     ```bash
@@ -94,15 +94,6 @@
 1. Substitute user do / Superuser do (sudo)
     sudo設定檔存放在`/etc/sudoers`，預設載入`/etc/sudoers.d`目錄下設定檔內容。
     ```bash
-    $ sudo <COMMAND>
-    ```
-    ```bash
-    $ sudo su -
-    ```
-    ```bash
-    $ sudo -i
-    ```
-    ```bash
     %wheel  ALL=(ALL)   ALL
     1       2   3       4  
     ```
@@ -113,14 +104,23 @@
     ```bash
     user01  ALL=(ALL)   NOPASSWD:ALL #不需要輸入密碼
     ```
+    ```bash
+    $ sudo <COMMAND>
+    ```
+    ```bash
+    $ sudo su -
+    ```
+    ```bash
+    $ sudo -i
+    ```
 ## Managing Local User Accounts
 ### Managing Local Users
-1. User Add (useradd)
+1. User add (useradd)
     建立使用者預設值存放在`/etc/login.defs`。
     ```bash
     $ useradd <USER> #建立使用者(<USER>)
     ```
-2. User Modify (usermod)
+2. User modify (usermod)
     ```bash
     $ usermod -c <COMMENT> <USER>
     ```
@@ -149,7 +149,7 @@
     ```bash
     $ usermod -U <USER> #解鎖使用者(<USER>)
     ```
-3. User Delete (userdel)
+3. User delete (userdel)
     ```bash
     $ userdel <USER>
     ```
@@ -173,7 +173,7 @@
     4. 1000+
 ## Managing Local Group Accounts
 ### Managing Local Groups
-1. Group Add (groupadd)
+1. Group add (groupadd)
     建立群組預設值存放在`/etc/login.defs`。
     ```bash
     $ groupadd <GROUP>
@@ -184,14 +184,14 @@
     ```bash
     $ groupadd -r <GROUP>
     ```
-2. Group Modify (groupmod)
+2. Group modify (groupmod)
     ```bash
     $ groupmod -n <NEW_GROUP> <GROUP>
     ```
     ```bash
     $ groupmod -g <GROUP_ID> <GROUP>
     ```
-3. Group Delete (groupdel)
+3. Group delete (groupdel)
     ```bash
     $ groupdel <GROUP>
     ```
@@ -227,7 +227,7 @@
     $ echo <PASSWORD> | openssl sha
     ```
 ### Configuring Password Aging
-1. Chage (chage)
+1. Change age (chage)
     ```bash
     $ chage -l <USER>
     ```
@@ -252,7 +252,7 @@
     $ usermod -L -e <DATE> <USER>
     ```
 ### Restricting Access
-1. User Modify (usermod)
+1. User modify (usermod)
     ```bash
     $ usermod -s <SHELL> <USER>
     $ usermod -s /sbin/nologin <USER>

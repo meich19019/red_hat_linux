@@ -19,7 +19,7 @@
     $ man <COMMAND> #查看指令(<COMMAND>)詳細資訊，常見符號有[]選項、<>必填、...可多個、|選項
     ```
 ### Shell Basics
-1. User Modify (usermod)
+1. User modify (usermod)
     ```bash
     $ usermod -L <USER> #鎖定使用者(<USER>)
     ```
@@ -75,7 +75,7 @@
     ```bash
     $ clear #清空終端機
     ```
-2. User Add (useradd)
+2. User add (useradd)
     ```bash
     $ useradd <USER> #建立使用者(<USER>)
     ```
@@ -123,16 +123,16 @@
     $ ls #查看工作目錄下檔案名稱
     ```
     ```bash
-    $ ls <PATH> #查看路徑(<PATH>)下檔案名稱
+    $ ls <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱
     ```
     ```bash
-    $ ls -l <PATH> #查看路徑(<PATH>)下檔案名稱及詳細資訊
+    $ ls -l <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱及詳細資訊
     ```
     ```bash
-    $ ls -l <PATH> | less #查看路徑(<PATH>)下檔案名稱及詳細資訊並可上下瀏覽
+    $ ls -l <FILE|DIRECTORY> | less #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱及詳細資訊並可上下瀏覽
     ```
     ```bash
-    $ ls -a <PATH> #查看路徑(<PATH>)下包含隱藏檔案的所有檔案名稱
+    $ ls -a <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下包含隱藏檔案的所有檔案或目錄名稱
     ```
 2. Concatenate (cat)
     ```bash
@@ -150,9 +150,9 @@
     ```
 3. Split and Concatenate
     ```bash
-    $ split -b <BLOCK_SIZE> <SOURCE_FILE> <TARGET_FILE_NAME> #將檔案(<SOURCE_FILE>)切割成多個檔案(<TARGET_FILE_NAME>1, <TARGET_FILE_NAME>2, ...)
+    $ split -b <BLOCK_SIZE> <SOURCE_FILE> <FILE_NAME> #將來源檔案(<SOURCE_FILE>)切割成多個目標檔案(<FILE_NAME>1, <FILE_NAME>2, ...)
     $ split -b 50M boot.iso file_ 
-    $ cat <SOURCE_FILE1> <SOURCE_FILE2> ... > <TARGET_FILE> #將多個檔案(<SOURCE_FILE1>, <SOURCE_FILE2>, ...)重組成檔案(TARGET_FILE)
+    $ cat <SOURCE_FILE1> <SOURCE_FILE2> ... > <FILE> #將多個來源檔案(<SOURCE_FILE1>, <SOURCE_FILE2>, ...)重組成目標檔案(FILE)
     $ cat file_* > boot.iso
     ```
 3. Head (head) and Tail (tail)
