@@ -21,8 +21,7 @@
 ### Shell Basics
 1. User Modify (usermod)
     ```bash
-    $ usermod -L <USER> #鎖定帳號(<USER>)
-    $ usermod -L user1
+    $ usermod -L <USER> #鎖定使用者(<USER>)
     ```
 ### Logging in to a Local Computer
 1. Terminal 終端機  
@@ -78,16 +77,14 @@
     ```
 2. User Add (useradd)
     ```bash
-    $ useradd <USER> #建立帳號(<USER>)
-    $ useradd user1
+    $ useradd <USER> #建立使用者(<USER>)
     ```
 3. Password (passwd)
     ```bash
-    $ passwd <USER> #對帳號(<USER>)建立密碼或變更密碼
-    $ passwd user1
+    $ passwd #變更目前使用者密碼
     ```
     ```bash
-    $ passwd #變更此帳號的密碼
+    $ passwd <USER> #建立或變更使用者(<USER>)密碼
     ```
 ## Executing Commands Using the Bash Shell
 ### Basic Command Syntax
@@ -111,7 +108,10 @@
     ```
 2. Password (passwd)
     ```bash
-    $ passwd #變更此帳號的密碼
+    $ passwd #變更目前使用者密碼
+    ```
+    ```bash
+    $ passwd <USER> #建立或變更使用者(<USER>)密碼
     ```
 3. File (file)
     ```bash
@@ -119,6 +119,9 @@
     ```
 ### Viewing the Contents of Files
 1. List (ls)
+    ```bash
+    $ ls #查看工作目錄下檔案名稱
+    ```
     ```bash
     $ ls <PATH> #查看路徑(<PATH>)下檔案名稱
     ```

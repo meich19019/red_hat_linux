@@ -92,6 +92,9 @@
 5. List (ls)
     ![List](p57_list.png "List")
     ```bash
+    $ ls #查看工作目錄下檔案名稱
+    ```
+    ```bash
     $ ls <PATH> #查看路徑(<PATH>)下檔案名稱
     ```
     ```bash
