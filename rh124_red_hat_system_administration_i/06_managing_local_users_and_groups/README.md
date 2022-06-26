@@ -94,7 +94,7 @@
     ```
 ### Running Commands with Sudo
 1. Substitute user do / Superuser do (sudo)
-    sudo主要設定存放在`/etc/sudoers`，預設載入`/etc/sudoers.d`目錄下設定檔內容。
+    sudo主要設定存放在`/etc/sudoers`，預設載入`/etc/sudoers.d`目錄下檔案設定內容。
     ```bash
     user01  ALL=(ALL)   NOPASSWD:ALL #不需要輸入密碼
     ```
