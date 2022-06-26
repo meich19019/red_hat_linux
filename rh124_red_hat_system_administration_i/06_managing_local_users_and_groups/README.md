@@ -5,7 +5,7 @@
     1. Superuser
     2. System user
     3. Regular user
-2. Identify (id)
+2. Identification (id)
     ```bash
     $ id
     ```
@@ -33,7 +33,7 @@
     $ ps
     ```
     ```bash
-    $ ps -aux
+    $ ps aux
     ```
 5. Local users  
     本地使用者詳細資料存放在`/etc/passwd`。
@@ -43,8 +43,8 @@
     ```
     1. 使用者名稱
     2. 使用者密碼
-    3. User ID (UID)
-    4. Group ID (GID)
+    3. User Identification (UID)
+    4. Group Identification (GID)
     5. 註解
     6. 家目錄
     7. 使用者的Shell
@@ -70,7 +70,7 @@
     ```
     1. 群組名稱
     2. 群組密碼
-    3. Group ID (GID)
+    3. Group Identification (GID)
     4. 隸屬成員
 ## Gain Superuser Access
 ### The Superuser
@@ -166,7 +166,7 @@
     ```bash
     $ passwd <USER> #建立或變更使用者(<USER>)密碼
     ```
-5. User ID (UID)
+5. User Identification (UID) Ranges
     1. 0
     2. 1-200
     3. 201-999
@@ -195,7 +195,7 @@
     ```bash
     $ groupdel <GROUP>
     ```
-4. Group ID (GID)
+4. Group Identification (GID) Ranges
     1. 0-999
     2. 1000+
 ## Managing User Passwords

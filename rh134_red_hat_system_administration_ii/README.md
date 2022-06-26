@@ -12,5 +12,4 @@
 ## [11 Managing Network Security](/rh134_red_hat_system_administration_ii/11_managing_network_security/README.md)
 ## [12 Installing Red Hat Enterprise Linux](/rh134_red_hat_system_administration_ii/12_installing_red_hat_enterprise_linux/README.md)
 ## [13 Running Containers](/rh134_red_hat_system_administration_ii/13_running_containers/README.md)
-## [14 Comprehensive Review](/rh134_red_hat_system_administration_ii/14_comprehensive_review/README.md)
 ## Return to [Red Hat Linux](/README.md)

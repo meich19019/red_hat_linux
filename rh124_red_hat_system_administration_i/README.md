@@ -15,5 +15,4 @@
 ## [14 Installing and Updating Software Packages](/rh124_red_hat_system_administration_i/14_installing_and_updating_software_packages/README.md)
 ## [15 Accessing Linux File Systems](/rh124_red_hat_system_administration_i/15_accessing_linux_file_systems/README.md)
 ## [16 Analyzing Servers and Getting Support](/rh124_red_hat_system_administration_i/16_analyzing_servers_and_getting_support/README.md)
-## [17 Comprehensive Review](/rh124_red_hat_system_administration_i/17_comprehensive_review/README.md)
 ## Return to [Red Hat Linux](/README.md)

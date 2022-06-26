@@ -9,5 +9,4 @@
 ## [08 Simplifying Playbooks with Roles](/rh294_red_hat_system_administration_iii_linux_automation/08_simplifying_playbooks_with_roles/README.md)
 ## [09 Troubleshooting Ansible](/rh294_red_hat_system_administration_iii_linux_automation/09_troubleshooting_ansible/README.md)
 ## [10 Automating Linux Administration Tasks](/rh294_red_hat_system_administration_iii_linux_automation/10_automating_linux_administration_tasks/README.md)
-## [11 Comprehensive Review: Automation with Ansible](/rh294_red_hat_system_administration_iii_linux_automation/11_comprehensive_review_automation_with_ansible/README.md)
 ## Return to [Red Hat Linux](/README.md)
