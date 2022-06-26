@@ -37,6 +37,7 @@
     ```
 5. Local users  
     本地使用者詳細資料存放在`/etc/passwd`。
+6. `/etc/passwd`
     ```bash
     user01:x:1000:1000:User One:/home/user01:/bin/bash
     1      2 3    4    5        6            7
@@ -48,7 +49,7 @@
     5. 註解
     6. 家目錄
     7. 使用者的Shell
-6. Local users password
+7. Local users password
     本地使用者密碼存放在`/etc/shadow`。
     1. Password Convert (pwconv)
         ```bash
@@ -64,6 +65,7 @@
     2. Supplementary groups
 2. Local groups
     本地群組詳細資料存放在`/etc/group`。
+3. `/etc/group`
     ```bash
     group01:x:10000:user01,user02,usr03
     1       2 3     4
@@ -92,15 +94,7 @@
     ```
 ### Running Commands with Sudo
 1. Substitute user do / Superuser do (sudo)
-    sudo設定檔存放在`/etc/sudoers`，預設載入`/etc/sudoers.d`目錄下設定檔內容。
-    ```bash
-    %wheel  ALL=(ALL)   ALL
-    1       2   3       4  
-    ```
-    1. 使用者名稱或群組名稱，沒有符號為使用者名稱，有%符號為群組名稱
-    2. 所在主機
-    3. 轉換成的身份
-    4. 被授權的指令
+    sudo主要設定存放在`/etc/sudoers`，預設載入`/etc/sudoers.d`目錄下設定檔內容。
     ```bash
     user01  ALL=(ALL)   NOPASSWD:ALL #不需要輸入密碼
     ```
@@ -113,6 +107,15 @@
     ```bash
     $ sudo -i
     ```
+2. `/etc/sudoers`
+    ```bash
+    %wheel  ALL=(ALL)   ALL
+    1       2   3       4  
+    ```
+    1. 使用者名稱或群組名稱，沒有符號為使用者名稱，有%符號為群組名稱
+    2. 所在主機
+    3. 轉換成的身份
+    4. 被授權的指令
 ## Managing Local User Accounts
 ### Managing Local Users
 1. User add (useradd)
@@ -202,6 +205,7 @@
 ### Shadow Passwords and Password Policy
 1. Local users password
     本地使用者密碼存放在`/etc/shadow`。
+2. `/etc/shadow`
     ```bash
     user03:$6$CSsXcYG1L/4ZfHr/$2W6evvJahUfzfHpc...:17933:0:99999:7:2:18113:
     1      2                                       3     4 5     6 7 8     9
@@ -219,7 +223,7 @@
     7. 必須變更密碼後幾天未變更將使用者鎖定
     8. 使用者的使用期限
     9. 保留未使用
-2. OpenSSL (openssl)
+3. OpenSSL (openssl)
     ```bash
     $ echo <PASSWORD> | openssl md5
     ```

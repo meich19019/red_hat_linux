@@ -45,7 +45,7 @@
     $ ssh -i mylab.pem student@workstation
     ```
 2. OpenBSD Secure Shell (OpenSSH)  
-    使用SSH透過計算機網路加密通訊的實現。
+    使用SSH透過計算機網路加密通訊的實現，OpenSSH主要設定存放在`/etc/ssh/sshd_config`。
 3. SSH Tunnel SSH隧道  
     利用SSH協定來建立這個隧道通訊傳送資料。
 4. Public key authentication 公開金鑰認證  
@@ -190,7 +190,7 @@
 ### Continuing a Long Command on Another Line
 ### Command History
 1. History (history)  
-    查看曾經下達過的命令，命令歷史紀錄預設存放在各使用者的家目錄下`~/.bash_history`。
+    查看曾經下達過的命令，各使用者命令歷史紀錄預設存放在`~/.bash_history`。
     ```bash
     $ history #查看命令歷史紀錄
     $ !<COMMAND> #重下此命令(<COMMAND>)在命令歷史紀錄中最近一次的命令

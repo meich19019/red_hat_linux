@@ -91,6 +91,28 @@
     在許多類Unix檔案系統中的一種資料結構，用於描述檔案系統物件。
 5. List (ls)
     ```bash
+    $ ls #查看工作目錄下檔案名稱
+    ```
+    ```bash
+    $ ls <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱
+    ```
+    ```bash
+    $ ls -l <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱及詳細資訊
+    ```
+    ```bash
+    $ ls -l <FILE|DIRECTORY> | less #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱及詳細資訊並可上下瀏覽
+    ```
+    ```bash
+    $ ls -a <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下包含隱藏檔案的所有檔案或目錄名稱
+    ```
+    ```bash
+    $ ls -i <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱及inode編號
+    ```
+    ```bash
+    $ ls -R <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄及所有子目錄檔案或目錄名稱
+    ```
+6. `$ ls -l`
+    ```bash
     drwxr-xr-x. 2 user user 4096 Feb  7 14:02 Desktop
     12        3 4 5    6    7    8            9
     ```
@@ -116,27 +138,6 @@
     7. 大小
     8. Inode的Modify Time
     9. 名稱
-    ```bash
-    $ ls #查看工作目錄下檔案名稱
-    ```
-    ```bash
-    $ ls <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱
-    ```
-    ```bash
-    $ ls -l <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱及詳細資訊
-    ```
-    ```bash
-    $ ls -l <FILE|DIRECTORY> | less #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱及詳細資訊並可上下瀏覽
-    ```
-    ```bash
-    $ ls -a <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下包含隱藏檔案的所有檔案或目錄名稱
-    ```
-    ```bash
-    $ ls -i <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄名稱及inode編號
-    ```
-    ```bash
-    $ ls -R <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)下檔案或目錄及所有子目錄檔案或目錄名稱
-    ```
 ## Managing Files Using Command-line Tools
 ### Command-line File Management
 1. Make directory (mkdir)
