@@ -11,8 +11,8 @@
     3. Standard error (stderr) 標準錯誤輸出  
         索引值為2，預設連接Terminal。
 ### Redirecting Output to a File
-1. I/O Redirection 輸入輸出重新導向
-    1. Output Redirection 輸出重新導向
+1. I/O redirection 輸入輸出重新導向
+    1. Output redirection 輸出重新導向
         ```bash
         $ <COMMAND> > <FILE> #指令(<COMMAND>)標準輸出重新導向至覆寫檔案(<FILE>)，沒有代碼時為代碼1標準輸出
         $ <COMMAND> 1> <FILE>
@@ -31,7 +31,7 @@
         $ <COMMAND> >> <FILE> 2>&1 #指令(<COMMAND>)標準輸出重新導向至附加檔案(<FILE>)，標準錯誤輸出重新導向至標準輸出
         $ <COMMAND> &>> <FILE> #指令(<COMMAND>)標準輸出和標準錯誤輸出重新導向至附加檔案(<FILE>)
         ```
-    2. Input Redirection 輸入重新導向
+    2. Input redirection 輸入重新導向
         ```bash
         $ <COMMAND> < <FILE> #檔案(<FILE>)標準輸入重新導向至指令(<COMMAND>)
         $ tr a-z A-Z #小寫轉成大寫

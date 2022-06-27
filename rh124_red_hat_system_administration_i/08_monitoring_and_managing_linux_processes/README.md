@@ -2,8 +2,8 @@
 ## Listing Processes
 ### Definition of a Process
 1. Process
-2. Process Identification (PID)
-3. Parent's Process Identification (PPID)
+2. Process identification (PID)
+3. Parent's process identification (PPID)
 4. Processes tree (pstree)
     ```bash
     $ pstree
@@ -19,7 +19,7 @@
     7. Stopped TASK_TRACED (T)
     8. Zombie EXIT_ZOMBIE (Z)
     9. Zombie EXIT_DEAD (X)
-2. Process ID of (pidof)
+2. Process identification of (pidof)
     ```bash
     $ pidof <COMMAND>
     ```
@@ -28,7 +28,7 @@
     $ top
     ```
 ### Listing Processes
-1. Process Status (ps)
+1. Process status (ps)
     ```bash
     $ ps
     ```
@@ -114,11 +114,11 @@
     $ pkill <COMMAND>
     ```
 ### Logging Users Out Administratively
-1. Who and What (w)
+1. Who and what (w)
     ```bash
     $ w
     ```
-2. Process Global search a Regular Expression and Print (pgrep)
+2. Process global search a regular expression and print (pgrep)
     ```bash
     $ pgrep -l -u <USER>
     ```

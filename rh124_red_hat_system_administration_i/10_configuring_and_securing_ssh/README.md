@@ -1,19 +1,18 @@
 # 10 Configuring and Securing SSH
 ## Accessing the Remote Command Line with SSH
 ### What is OpenSSH
-1. OpenBSD Secure Shell (OpenSSH)  
-    使用SSH透過計算機網路加密通訊的實現，OpenSSH主要設定存放在`/etc/ssh/sshd_config`。
+1. OpenBSD secure shell (OpenSSH)  
+    使用ssh透過計算機網路加密通訊的實現，此設定存放在`/etc/ssh/sshd_config`。
 ### Secure Shell Examples
-1. Secure Shell (SSH) 安全外殼協定  
-    一種加密的網路傳輸協定，SSH通過在網路中建立安全隧道來實現SSH客戶端與伺服器之間的連接。
+1. Secure shell (ssh) 安全外殼協定
     ```bash
-    $ ssh <REMOTE_USER>@<REMOTE_HOST> #透過SSH以使用者(<REMOTE_USER>)遠端登入系統(<REMOTE_HOST>)
+    $ ssh <REMOTE_USER>@<REMOTE_HOST> #透過ssh以使用者(<REMOTE_USER>)遠端登入系統(<REMOTE_HOST>)
     ```
     ```bash
     $ ssh <REMOTE_USER>@<REMOTE_HOST> <COMMAND>
     ```
 ### Identifying Remote Users
-1. Who and What (w)
+1. Who and what (w)
     ```bash
     $ w
     ```
@@ -47,7 +46,7 @@
     $ ssh-copy-id -i <PUBLIC_KEY> <REMOTE_USER>@<REMOTE_HOST>
     $ ssh-copy-id -i ~/.ssh/id_rsa.pub root@serverb
     ```
-3. Secure Shell (SSH) 安全外殼協定
+3. Secure shell (ssh) 安全外殼協定
     ```bash
     $ ssh <REMOTE_USER>@<REMOTE_HOST> #透過SSH以使用者(<REMOTE_USER>)遠端登入系統(<REMOTE_HOST>)
     ```
@@ -71,8 +70,8 @@
     ```
 ## Customizing OpenSSH Service Configuration
 ### Configuring the OpenSSH Server
-1. OpenBSD Secure Shell (OpenSSH)  
-    使用SSH透過計算機網路加密通訊的實現，OpenSSH主要設定存放在`/etc/ssh/sshd_config`。
+1. OpenBSD secure shell (OpenSSH)  
+    使用ssh透過計算機網路加密通訊的實現，此設定存放在`/etc/ssh/sshd_config`。
 ### Prohibit the Superuser From Logging in Using SSH
 1. `/etc/ssh/sshd_config`
     ```bash

@@ -9,10 +9,10 @@
     5. `/var/log/boot.log`
 ## Reviewing Syslog Files
 ### Logging Events to the System
-1. Syslog Priorities
+1. Syslog priorities
 ### Sample Rules of Rsyslog
 1. Rocket-fast system for log (rsyslog)  
-    rsyslog主要設定存放在`/etc/rsyslog.conf`，預設載入`/etc/rsyslog.d`目錄下檔案設定內容。
+    此設定存放在`/etc/rsyslog.conf`，預設載入`/etc/rsyslog.d`目錄下檔案設定內容。
 2. `/etc/rsyslog.conf`
     ```bash
     *.info;mail.none;authpriv.none;cron.none    /var/log/messages
@@ -30,7 +30,7 @@
     5. 處理方式
 ### Log File Rotation
 1. Log rotate (logrotate)  
-    logrotate主要設定存放在`/etc/logrotate.conf`，預設載入`/etc/logrotate.d`目錄下檔案設定內容。
+    此設定存放在`/etc/logrotate.conf`，預設載入`/etc/logrotate.d`目錄下檔案設定內容。
 2. `/etc/logrotate.conf`
     ```bash
     weekly
@@ -103,7 +103,7 @@
 ## Preserving the System Journal
 ### Storing the System Journal Permanently
 1. System journal (systemd-journald)  
-    systemd-journald主要設定存放在`/etc/systemd/journald.conf`。
+    此設定存放在`/etc/systemd/journald.conf`。
 2. `/etc/systemd/journald.conf`
     ```bash
     Storage=persistent
@@ -126,7 +126,7 @@
     ```
 ## Maintaining Accurate Time
 ### Setting Local Clocks and Time Zones
-1. Network Time Protocol (NTP)
+1. Network time protocol (NTP)
 2. Time date control (timedatectl)
     ```bash
     $ timedatectl
@@ -143,13 +143,13 @@
     ```bash
     $ timedatectl set-ntp true
     ```
-3. Timezone select  (tzselect)
+3. Timezone select (tzselect)
     ```bash
     $ tzselect
     ```
 ### Configuring and Monitoring Chronyd
 1. Chrony (chronyd)
-    chronyd主要設定存放在`/etc/chrony.conf`。
+    此設定存放在`/etc/chrony.conf`。
 2. `/etc/chrony.conf`
     ```bash
     server classroom.example.com iburst

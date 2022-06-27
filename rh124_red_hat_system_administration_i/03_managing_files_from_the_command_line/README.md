@@ -6,7 +6,7 @@
     ![Significant file-system directories in Red Hat Enterprise Linux 8](p48_significant_file-system_directories_in_red_hat_enterprise_linux_8.png "Significant file-system directories in Red Hat Enterprise Linux 8")
 2. Home directory 家目錄  
     在多使用者作業系統上包含該系統特定使用者檔案的檔案系統目錄。
-3. Important Red Hat Enterprise Linux Directories
+3. Important Red Hat Enterprise Linux directories
     1. `/usr`  
         安裝的軟體、共享的套件，包含檔案和唯讀程式資料。
     2. `/etc`  
@@ -31,40 +31,40 @@
         屬於系統暫存資料，對應記憶體。
 ## Specifying Files by Name
 ### Absolute Paths and Relative Paths
-1. Absolute Paths 絕對路徑  
+1. Absolute paths 絕對路徑  
     一個完全確保的名稱，指定檔案系統階層結構中檔案的確切位置。
-2. Relative Paths 相對路徑  
+2. Relative paths 相對路徑  
     定義一個唯一檔案，僅指定從工作目錄到達該檔案所需的路徑。
 3. Working directory 工作目錄  
     使用者在作業系統內所在的目錄。
 4. Linux file systems
     1. Fourth extended filesystem (ext4) 第四代擴充套件檔案系統  
         Linux系統下的日誌檔案系統，是ext3檔案系統的後繼版本。
-    2. Extents file system (XFS)  
+    2. Extents file system (xfs)  
         高效能的日誌檔案系統，特別擅長處理大檔案，同時提供平滑的資料傳輸。
 5. Non-Linux file systems
-    1. File Allocation Table (FAT) 檔案配置表  
+    1. File allocation table (FAT) 檔案配置表  
         微軟發明並擁有部分專利的檔案系統，供MS-DOS使用。
-    2. Extended File Allocation Table (exFAT)  
+    2. Extended file allocation table (exFAT)  
         微軟開發的一種較適合於快閃記憶體的檔案系統。
         ```bash
         $ yum install fuse-exfat #安裝套件讀寫exFAT
         ```
-    3. New Technology File System (NTFS)
+    3. New technology file system (NTFS)
         微軟開發的專用檔案系統，從Windows NT 3.1開始成為Windows NT家族的預設檔案系統。
         ```bash
         $ yum install ntfs-3g #安裝套件讀寫NTFS
         ```
-    4. Hierarchical File System (HFS) 分層檔案系統  
+    4. Hierarchical file system (HFS) 分層檔案系統  
         蘋果開發，並使用在Mac OS上的檔案系統。
-    5. Hierarchical File System Plus (HFS+)  
+    5. Hierarchical file system plus (HFS+)  
         蘋果為替代他們的分層檔案系統(HFS)而開發的一種檔案系統，改善了HFS對磁碟空間的位址定位效率。
 ### Navigating Paths
-1. Print Working Directory (pwd)
+1. Print working directory (pwd)
     ```bash
     $ pwd #查看工作目錄
     ```
-2. Change Directory (cd)
+2. Change directory (cd)
     ```bash
     $ cd <DIRECTORY> #改變工作目錄至指定目錄(<DIRECTORY>)
     ```
@@ -196,11 +196,11 @@
     ```
 ## Making Links Between Files
 ### Managing Links Between Files
-1. Hard Link 硬連結  
+1. Hard link 硬連結  
     檔案系統中的多個檔案平等地共享同一個檔案儲存單元，硬連結必須在同一個檔案系統中。
-2. Soft Link (Symbolic Link) 軟連結
+2. Soft link (Symbolic link) 軟連結
     以絕對路徑或者相對路徑的形式指向其它檔案或者目錄的參照。
-3. Hard Link and Soft Link
+3. Hard link and Soft link
     ![Hard Link and Soft Link](p78_hard_link_and_soft_link.png "Hard Link and Soft Link")
 4. Link (ln)
     ```bash
@@ -209,17 +209,17 @@
     ```bash
     $ ln -s <SOURCE_FILE|SOURCE_DIRECTORY> <FILE|DIRECTORY> #建立來源檔案或目錄(<SOURCE_FILE|SOURCE_DIRECTORY>)的目標檔案或目錄(<FILE|DIRECTORY>)軟連結
     ```
-5. Disk Free (df)
+5. Disk free (df)
     ```bash
     $ df #查看檔案系統的可用磁碟空間
     ```
-6. Change Directory (cd)
+6. Change directory (cd)
     ```bash
     $ cd -P <DIRECTORY> #改變工作目錄至指定目錄(<DIRECTORY>)，當指定目錄為Soft Link，則改變工作目錄至指定目錄的實際目錄
     ```
 ## Matching File Names with Shell Expansions
 ### Command-line Expansions
-1. Pattern Matching 模式匹配  
+1. Pattern matching 模式匹配  
     檢查提供的記號序列中，是否存在某種模式組成。
 2. Metacharacters  
     具有特殊意義的字符。
@@ -249,12 +249,12 @@
     ```bash
     $ echo <COMMAND> #顯示命令(<COMMAND>)
     ```
-5. Tilde Expansion
+5. Tilde expansion
     ```bash
     $ echo ~<USER> #顯示使用者(<USER>)家目錄
     $ echo ~root #顯示使用者(root)家目錄
     ```
-6. Brace Expansion
+6. Brace expansion
     ```bash
     $ echo file{<ITEM1>, <ITEM2>, ...} #顯示多個項目(<ITEM1>, <ITEM2>, ...)
     $ echo file{1,3,5} #顯示多個項目(file1, file3, file5)
@@ -264,7 +264,7 @@
     $ echo file{1..3} #顯示連續項目(file1, file2, file3)
     $ echo {a..c}.txt #顯示連續項目(a.txt, b.txt, c.txt)
     ```
-7. Variable Expansion
+7. Variable expansion
     ```bash
     $ <VARIABLE_NAME>=<VALUE> #指定變數(<VARIABLE_NAME>)的值(<VALUE>)
     $ USERNAME=operator #指定變數(USERNAME)的值(operator)
@@ -273,7 +273,7 @@
     $ echo ${<VARIABLE_NAME>} #顯示變數(<VARIABLE_NAME>)的值
     $ echo ${USERNAME} #顯示變數(USERNAME)的值
     ```
-8. Command Substitution
+8. Command substitution
     ```bash
     $ echo $(<COMMAND>) #顯示命令(<COMMAND>)替換的結果
     $ echo today is $(date +%A) #顯示命令(date +%A)替換的結果
@@ -283,7 +283,7 @@
     $ which <COMMAND> #查看命令(<COMMAND>)執行檔路徑
     $ which cat
     ```
-10. Protecting Arguments from Expansion
+10. Protecting arguments from expansion
     ```bash
     $ echo ${HOME} #顯示變數(HOME)的值
     $ echo \${HOME} #因跳脫字元顯示變數名稱(${HOME})

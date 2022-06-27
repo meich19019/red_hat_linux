@@ -28,7 +28,7 @@
     ```bash
     $ ls -ld <FILE|DIRECTORY> #查看檔案或目錄(<FILE|DIRECTORY>)本身名稱及詳細資訊
     ```
-4. Process Status (ps)
+4. Process status (ps)
     ```bash
     $ ps
     ```
@@ -78,7 +78,7 @@
 ### The Superuser
 1. Root (root)
 ### Switching Users
-1. Switch User (su)
+1. Switch user (su)
     ```bash
     $ su root
     ```
@@ -94,7 +94,7 @@
     ```
 ### Running Commands with Sudo
 1. Substitute user do / Superuser do (sudo)
-    sudo主要設定存放在`/etc/sudoers`，預設載入`/etc/sudoers.d`目錄下檔案設定內容。
+    此設定存放在`/etc/sudoers`，預設載入`/etc/sudoers.d`目錄下檔案設定內容。
     ```bash
     user01  ALL=(ALL)   NOPASSWD:ALL #不需要輸入密碼
     ```
@@ -169,7 +169,7 @@
     ```bash
     $ passwd <USER> #建立或變更使用者(<USER>)密碼
     ```
-5. User Identification (UID) Ranges
+5. User identification (UID) ranges
     1. 0
     2. 1-200
     3. 201-999
@@ -198,7 +198,7 @@
     ```bash
     $ groupdel <GROUP>
     ```
-4. Group Identification (GID) Ranges
+4. Group identification (GID) ranges
     1. 0-999
     2. 1000+
 ## Managing User Passwords
@@ -261,6 +261,6 @@
     $ usermod -s <SHELL> <USER>
     $ usermod -s /sbin/nologin <USER>
     ```
-2. Linux Pluggable Authentication Modules (PAM) Linux可插拔身份驗證模塊
+2. Linux pluggable authentication modules (PAM) Linux可插拔身份驗證模塊
     1. DUO
 ## Return to [RH124 Red Hat System Administration I](/rh124_red_hat_system_administration_i/README.md)

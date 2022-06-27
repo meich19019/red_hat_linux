@@ -8,12 +8,12 @@
 ### Types of Open Source Licenses
 1. Copyleft 公共授權條款  
     允許使用者自由使用、散佈、改作以外，要求對改作後的衍生作品要使用相同授權條款授予作者，以保障其後續所有衍生作品都能被任何人自由使用。常見的包括：
-    1. GNU General Public License (GPL)
-    2. Lesser GNU Public License (LGPL)
+    1. GNU general public license (GPL)
+    2. Lesser GNU public license (LGPL)
 2. Permission 寬鬆自由軟體授權條款  
     允許使用者自由使用、散佈、改作，允許轉散發者限制他人對原始碼的存取權。常見的包括：
-    1. Massachusetts Institute of Technology License (MIT)
-    2. Berkeley Software Distribution License (BSD)
+    1. Massachusetts institute of technology license (MIT)
+    2. Berkeley software distribution license (BSD)
 ### Who Develops Open Source Software?
 ### Who is Red Hat?
 ### What is a Linux distribution?

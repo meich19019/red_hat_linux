@@ -2,7 +2,7 @@
 ## Reading Manual Page
 ### Introducing the man command
 1. Manual pages (man)  
-    man查詢指令的檔案存放在`/usr/share/doc`，另外查詢指令的網址在[http://www.redhat.com/docs](https://www.redhat.com/docs)。
+    查詢指令的檔案存放在`/usr/share/doc`，另外查詢指令的網址在[http://www.redhat.com/docs](https://www.redhat.com/docs)。
     ```bash
     $ man <COMMAND> #查看指令(<COMMAND>)詳細資訊，常見符號有[]選項、<>必填、...可多個、|選項
     $ man passwd
@@ -17,7 +17,7 @@
     $ ps2pdf fdisk.ps #將ps格式轉為pdf格式
     ```
 ### Navigate and Search Man Pages
-1. Navigating Man Pages
+1. Navigating man pages
     1. `Space`  
         向下捲動一個視窗。
     2. `b`  
@@ -51,7 +51,7 @@
     $ pinfo <COMMAND> #用選項查看指令(<COMMAND>)詳細資訊
     ```
 ### Comparing GNU Info and Man Page Navigation
-1. Navigating Pinfo
+1. Navigating pinfo
     1. `Space`  
         向下捲動一個視窗。
     2. `b`  
