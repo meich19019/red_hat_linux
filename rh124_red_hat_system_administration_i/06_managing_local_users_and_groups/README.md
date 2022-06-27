@@ -37,7 +37,7 @@
     ```
 5. Local users  
     本地使用者詳細資料存放在`/etc/passwd`。
-6. `/etc/passwd`
+6. `$ cat /etc/passwd`
     ```bash
     user01:x:1000:1000:User One:/home/user01:/bin/bash
     1      2 3    4    5        6            7
@@ -65,7 +65,7 @@
     2. Supplementary groups
 2. Local groups  
     本地群組詳細資料存放在`/etc/group`。
-3. `/etc/group`
+3. `$ cat /etc/group`
     ```bash
     group01:x:10000:user01,user02,usr03
     1       2 3     4
@@ -94,7 +94,7 @@
     ```
 ### Running Commands with Sudo
 1. Substitute user do / Superuser do (sudo)  
-    此設定存放在`/etc/sudoers`，預設載入`/etc/sudoers.d`目錄下檔案設定內容。
+    權限設定存放在`/etc/sudoers`，預設載入`/etc/sudoers.d`目錄下檔案內容。
     ```bash
     user01  ALL=(ALL)   NOPASSWD:ALL #不需要輸入密碼
     ```
@@ -107,7 +107,7 @@
     ```bash
     $ sudo -i
     ```
-2. `/etc/sudoers`
+2. `$ cat /etc/sudoers`
     ```bash
     %wheel  ALL=(ALL)   ALL
     1       2   3       4  
@@ -205,7 +205,7 @@
 ### Shadow Passwords and Password Policy
 1. Local users password  
     本地使用者密碼存放在`/etc/shadow`。
-2. `/etc/shadow`
+2. `$ cat /etc/shadow`
     ```bash
     user03:$6$CSsXcYG1L/4ZfHr/$2W6evvJahUfzfHpc...:17933:0:99999:7:2:18113:
     1      2                                       3     4 5     6 7 8     9

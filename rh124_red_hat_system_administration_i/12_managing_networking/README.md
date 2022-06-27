@@ -109,7 +109,7 @@
 ## Configuring Networking from the Command Line
 ### Describing NetworkManager Concepts
 1. NetworkManager  
-    NetworkManager預設載入`/etc/sysconfig/network-scripts`目錄下檔案設定內容。
+    網路設定存放在`/etc/sysconfig/network-scripts`目錄下檔案內容。
     1. Device
     2. Connection
 ### Viewing Networking Information
@@ -153,7 +153,7 @@
     ```
 ### Modifying Network Connection Settings
 1. NetworkManager  
-    NetworkManager預設載入`/etc/sysconfig/network-scripts`目錄下檔案設定內容。
+    網路設定存放在`/etc/sysconfig/network-scripts`目錄下檔案內容。
 2. NetworkManager command-line interface (nmcli)
     ```bash
     $ nmcli connection show <CONNECTION_NAME>
@@ -186,7 +186,7 @@
 ## Editing Network Configuration Filees
 ### Describing Connection Configuration Files
 1. NetworkManager  
-    NetworkManager預設載入`/etc/sysconfig/network-scripts`目錄下檔案設定內容。
+    網路設定存放在`/etc/sysconfig/network-scripts`目錄下檔案內容。
 2. NetworkManager command-line interface (nmcli)
     ```bash
     $ nmcli connection reload

@@ -45,7 +45,7 @@
     $ ssh -i mylab.pem student@workstation
     ```
 2. OpenBSD secure shell (OpenSSH)  
-    使用ssh透過計算機網路加密通訊的實現，此設定存放在`/etc/ssh/sshd_config`。
+    使用ssh透過計算機網路加密通訊的實現，ssh伺服器設定存放在`/etc/ssh/sshd_config`。
 3. SSH Tunnel  
     利用ssh協定來建立這個隧道通訊傳送資料。
 4. Public key authentication 公開金鑰認證  

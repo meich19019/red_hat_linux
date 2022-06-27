@@ -12,8 +12,8 @@
 1. Syslog priorities
 ### Sample Rules of Rsyslog
 1. Rocket-fast system for log (rsyslog)  
-    此設定存放在`/etc/rsyslog.conf`，預設載入`/etc/rsyslog.d`目錄下檔案設定內容。
-2. `/etc/rsyslog.conf`
+    日誌記錄設定存放在`/etc/rsyslog.conf`，預設載入`/etc/rsyslog.d`目錄下檔案內容。
+2. `$ cat /etc/rsyslog.conf`
     ```bash
     *.info;mail.none;authpriv.none;cron.none    /var/log/messages
     123   4                                     5
@@ -30,16 +30,14 @@
     5. 處理方式
 ### Log File Rotation
 1. Log rotate (logrotate)  
-    此設定存放在`/etc/logrotate.conf`，預設載入`/etc/logrotate.d`目錄下檔案設定內容。
-2. `/etc/logrotate.conf`
+    日誌儲存方式設定存放在`/etc/logrotate.conf`，預設載入`/etc/logrotate.d`目錄下檔案內容。
+2. `$ cat /etc/logrotate.conf`
     ```bash
     weekly
-    ```
-    ```bash
     rotate 4
     ```
 ### Analyzing a Syslog Entry
-1. `/var/log/messages`
+1. `$ cat /var/log/messages`
     ```bash
     Jun 26 05:41:08 workstation systemd[1]: Started dnf makecache.
     1               2           3           4
@@ -103,8 +101,8 @@
 ## Preserving the System Journal
 ### Storing the System Journal Permanently
 1. System journal (systemd-journald)  
-    此設定存放在`/etc/systemd/journald.conf`。
-2. `/etc/systemd/journald.conf`
+    系統日誌儲存設定存放在`/etc/systemd/journald.conf`。
+2. `$ cat /etc/systemd/journald.conf`
     ```bash
     Storage=persistent
     ```
@@ -149,8 +147,8 @@
     ```
 ### Configuring and Monitoring Chronyd
 1. Chrony (chronyd)  
-    此設定存放在`/etc/chrony.conf`。
-2. `/etc/chrony.conf`
+    時間伺服器設定存放在`/etc/chrony.conf`。
+2. `$ cat /etc/chrony.conf`
     ```bash
     server classroom.example.com iburst
     ```
