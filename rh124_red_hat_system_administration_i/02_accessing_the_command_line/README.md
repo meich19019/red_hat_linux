@@ -150,9 +150,9 @@
     ```
 3. Split (split) and Concatenate (cat)
     ```bash
-    $ split -b <BLOCK_SIZE> <SOURCE_FILE> <FILE_NAME> #將來源檔案(<SOURCE_FILE>)切割成多個目標檔案(<FILE_NAME>1, <FILE_NAME>2, ...)
+    $ split -b <BLOCK_SIZE> <SOURCE_FILE> <FILE_NAME> #將來源檔案(<SOURCE_FILE>)用指定的區塊大小(<BLOCK_SIZE>)切割成多個目標檔案(<FILE_NAME>1, <FILE_NAME>2, ...)
     $ split -b 50M boot.iso file_ 
-    $ cat <SOURCE_FILE1> <SOURCE_FILE2> ... > <FILE> #將多個來源檔案(<SOURCE_FILE1>, <SOURCE_FILE2>, ...)重組成目標檔案(FILE)
+    $ cat <SOURCE_FILE1> <SOURCE_FILE2> ... > <FILE_NAME> #將多個來源檔案(<SOURCE_FILE1>, <SOURCE_FILE2>, ...)重組成目標檔案(FILE_NAME)
     $ cat file_* > boot.iso
     ```
 3. Head (head) and Tail (tail)

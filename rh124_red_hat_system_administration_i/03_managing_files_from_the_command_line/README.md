@@ -85,7 +85,7 @@
     ```
 3. Touch (touch)
     ```bash
-    $ touch <FILE> #建立檔案(<FILE>)
+    $ touch <FILE_NAME> #建立檔案(<FILE_NAME>)
     ```
 4. Index node (inode)  
     在許多類Unix檔案系統中的一種資料結構，用於描述檔案系統物件。
@@ -204,10 +204,10 @@
     ![Hard Link and Soft Link](p78_hard_link_and_soft_link.png "Hard Link and Soft Link")
 4. Link (ln)
     ```bash
-    $ ln <SOURCE_FILE> <FILE> #建立來源檔案(<SOURCE_FILE>)的目標檔案(<FILE>)硬連結
+    $ ln <SOURCE_FILE> <FILE_NAME> #建立來源檔案(<SOURCE_FILE>)的目標檔案(<FILE_NAME>)硬連結
     ```
     ```bash
-    $ ln -s <SOURCE_FILE|SOURCE_DIRECTORY> <FILE|DIRECTORY> #建立來源檔案或目錄(<SOURCE_FILE|SOURCE_DIRECTORY>)的目標檔案或目錄(<FILE|DIRECTORY>)軟連結
+    $ ln -s <SOURCE_FILE|SOURCE_DIRECTORY> <FILE_NAME|DIRECTORY_NAME> #建立來源檔案或目錄(<SOURCE_FILE|SOURCE_DIRECTORY>)的目標檔案或目錄(<FILE|DIRECTORY>)軟連結
     ```
 5. Disk free (df)
     ```bash

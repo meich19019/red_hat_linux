@@ -49,7 +49,7 @@
     5. 註解
     6. 家目錄
     7. 使用者的Shell
-7. Local users password
+7. Local users password  
     本地使用者密碼存放在`/etc/shadow`。
     1. Password Convert (pwconv)
         ```bash
@@ -63,7 +63,7 @@
 1. Group
     1. Primary group
     2. Supplementary groups
-2. Local groups
+2. Local groups  
     本地群組詳細資料存放在`/etc/group`。
 3. `/etc/group`
     ```bash
@@ -93,7 +93,7 @@
     $ su - <USER> -c <COMMAND>
     ```
 ### Running Commands with Sudo
-1. Substitute user do / Superuser do (sudo)
+1. Substitute user do / Superuser do (sudo)  
     此設定存放在`/etc/sudoers`，預設載入`/etc/sudoers.d`目錄下檔案設定內容。
     ```bash
     user01  ALL=(ALL)   NOPASSWD:ALL #不需要輸入密碼
@@ -118,7 +118,7 @@
     4. 被授權的指令
 ## Managing Local User Accounts
 ### Managing Local Users
-1. User add (useradd)
+1. User add (useradd)  
     建立使用者預設值存放在`/etc/login.defs`。
     ```bash
     $ useradd <USER> #建立使用者(<USER>)
@@ -176,7 +176,7 @@
     4. 1000+
 ## Managing Local Group Accounts
 ### Managing Local Groups
-1. Group add (groupadd)
+1. Group add (groupadd)  
     建立群組預設值存放在`/etc/login.defs`。
     ```bash
     $ groupadd <GROUP>
@@ -203,7 +203,7 @@
     2. 1000+
 ## Managing User Passwords
 ### Shadow Passwords and Password Policy
-1. Local users password
+1. Local users password  
     本地使用者密碼存放在`/etc/shadow`。
 2. `/etc/shadow`
     ```bash

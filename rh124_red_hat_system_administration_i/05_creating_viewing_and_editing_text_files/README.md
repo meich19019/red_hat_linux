@@ -60,7 +60,7 @@
     ```bash
     $ vi <FILE> #開啟vi文字編輯器編輯檔案(<FILE>)
     ```
-2. Vim (vim)
+2. Vim (vim)  
     從vi發展出來的一個文字編輯器，代碼補全、編譯及錯誤跳轉等方便編程的功能特別豐富。
     ![Moving between Vim modes](p135_moving_between_vim_modes.png "Moving between Vim modes")
     ```bash

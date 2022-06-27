@@ -148,7 +148,7 @@
     $ tzselect
     ```
 ### Configuring and Monitoring Chronyd
-1. Chrony (chronyd)
+1. Chrony (chronyd)  
     此設定存放在`/etc/chrony.conf`。
 2. `/etc/chrony.conf`
     ```bash
