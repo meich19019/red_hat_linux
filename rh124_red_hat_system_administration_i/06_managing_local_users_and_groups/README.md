@@ -90,7 +90,7 @@
     $ su - <USER>
     ```
     ```bash
-    $ su - <USER> -c <COMMAND>
+    $ su - <USER> -c <SCRIPT>
     ```
 ### Running Commands with Sudo
 1. Substitute user do / Superuser do (sudo)  
@@ -99,7 +99,7 @@
     user01  ALL=(ALL)   NOPASSWD:ALL #不需要輸入密碼
     ```
     ```bash
-    $ sudo <COMMAND>
+    $ sudo <SCRIPT>
     ```
     ```bash
     $ sudo su -

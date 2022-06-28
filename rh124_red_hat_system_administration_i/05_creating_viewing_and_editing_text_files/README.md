@@ -14,26 +14,26 @@
 1. I/O redirection 輸入輸出重新導向
     1. Output redirection 輸出重新導向
         ```bash
-        $ <COMMAND> > <FILE> #指令(<COMMAND>)標準輸出重新導向至覆寫檔案(<FILE>)，沒有代碼時為代碼1標準輸出
-        $ <COMMAND> 1> <FILE>
-        $ <COMMAND> 2> <FILE> #指令(<COMMAND>)標準錯誤輸出重新導向至覆寫檔案(<FILE>)
-        $ <COMMAND> 2> /dev/null #指令(<COMMAND>)標準錯誤輸出重新導向至空裝置(/dev/null)
+        $ <SCRIPT> > <FILE> #指令(<SCRIPT>)標準輸出重新導向至覆寫檔案(<FILE>)，沒有代碼時為代碼1標準輸出
+        $ <SCRIPT> 1> <FILE>
+        $ <SCRIPT> 2> <FILE> #指令(<SCRIPT>)標準錯誤輸出重新導向至覆寫檔案(<FILE>)
+        $ <SCRIPT> 2> /dev/null #指令(<SCRIPT>)標準錯誤輸出重新導向至空裝置(/dev/null)
         ```
         ```bash
-        $ <COMMAND> >> <FILE> #指令(<COMMAND>)標準輸出重新導向至附加檔案(<FILE>)，沒有代碼時為代碼1標準輸出
-        $ <COMMAND> 1>> <FILE>
+        $ <SCRIPT> >> <FILE> #指令(<SCRIPT>)標準輸出重新導向至附加檔案(<FILE>)，沒有代碼時為代碼1標準輸出
+        $ <SCRIPT> 1>> <FILE>
         ```
         ```bash
-        $ <COMMAND> > <FILE> 2>&1 #指令(<COMMAND>)標準輸出重新導向至覆寫檔案(<FILE>)，標準錯誤輸出重新導向至標準輸出
-        $ <COMMAND> &> <FILE> #指令(<COMMAND>)標準輸出和標準錯誤輸出重新導向至覆寫檔案(<FILE>)
+        $ <SCRIPT> > <FILE> 2>&1 #指令(<SCRIPT>)標準輸出重新導向至覆寫檔案(<FILE>)，標準錯誤輸出重新導向至標準輸出
+        $ <SCRIPT> &> <FILE> #指令(<SCRIPT>)標準輸出和標準錯誤輸出重新導向至覆寫檔案(<FILE>)
         ```
         ```bash
-        $ <COMMAND> >> <FILE> 2>&1 #指令(<COMMAND>)標準輸出重新導向至附加檔案(<FILE>)，標準錯誤輸出重新導向至標準輸出
-        $ <COMMAND> &>> <FILE> #指令(<COMMAND>)標準輸出和標準錯誤輸出重新導向至附加檔案(<FILE>)
+        $ <SCRIPT> >> <FILE> 2>&1 #指令(<SCRIPT>)標準輸出重新導向至附加檔案(<FILE>)，標準錯誤輸出重新導向至標準輸出
+        $ <SCRIPT> &>> <FILE> #指令(<SCRIPT>)標準輸出和標準錯誤輸出重新導向至附加檔案(<FILE>)
         ```
     2. Input redirection 輸入重新導向
         ```bash
-        $ <COMMAND> < <FILE> #檔案(<FILE>)標準輸入重新導向至指令(<COMMAND>)
+        $ <SCRIPT> < <FILE> #檔案(<FILE>)標準輸入重新導向至指令(<SCRIPT>)
         $ tr a-z A-Z #小寫轉成大寫
         $ tr a-z A-Z < /etc/passwd
         ```
@@ -43,14 +43,14 @@
     ![Process I/O piping](p127_process_i_o_piping.png "Process I/O piping")
 2. Pipe
     ```bash
-    $ <COMMAND1> | <COMMAND2> #指令(<COMMAND1>)標準輸出重新導向至下一個指令(<COMMAND2>)
+    $ <SCRIPT> | <SCRIPT> #指令(<SCRIPT1>)標準輸出重新導向至下一個指令(<SCRIPT2>)
     $ cat /etc/passwd | wc
     ```
 3. Tee (tee)  
     讀取標準輸入的資料，複製一份存成檔案，並將其內容輸出到標準輸出。
     ![Process I/O piping with tee](p128_process_i_o_piping_with_tee.png "Process I/O piping with tee")
     ```bash
-    $ <COMMAND1> | tee <FILE> | <COMMAND2> #指令(<COMMAND1>)標準輸出重新導向至tee複製一份存成檔案(<FILE>)，再將標準輸出重新導向至下一個指令(<COMMAND2>)
+    $ <SCRIPT1> | tee <FILE> | <SCRIPT2> #指令(<SCRIPT1>)標準輸出重新導向至tee複製一份存成檔案(<FILE>)，再將標準輸出重新導向至下一個指令(<SCRIPT2>)
     $ cat /etc/passwd | tee /tmp/passwd | wc
     ```
 ## Editing Text Files from the Shell Prompt
@@ -224,7 +224,7 @@
     ![Exact scripts flow](p145_exact_scripts_flow.png "Exact scripts flow")
 2. Alias (alias) 別名
     ```bash
-    $ alias <ALIAS>=<COMMAND> #指定別名(<ALIAS>)代表的命令(<COMMAND>)
+    $ alias <ALIAS>=<SCRIPT> #指定別名(<ALIAS>)代表的指令(<SCRIPT>)
     $ alias la="ls -la" #指定別名(la)代表查看包含隱藏檔案的所有檔案名稱及詳細資訊("ls -la")
     ```
     ```bash
@@ -234,9 +234,9 @@
 3. Function
     ```bash
     $ function <FUNCTION>(){ 
-    > <COMMAND1>
-    > <COMMAND2>
-    > } #指定函式(<FUNCTION>)執行多個命令(<COMMAND1>, <COMMAND2>, ...)
+    > <SCRIPT1>
+    > <SCRIPT2>
+    > } #指定函式(<FUNCTION>)執行多個指令(<SCRIPT1>, <SCRIPT2>, ...)
     $ function test(){ 
     > echo "Hello World!"
     > } #指定函式(test)執行顯示字串(echo "Hello World!")

@@ -247,7 +247,7 @@
     ```
 4. Echo (echo)
     ```bash
-    $ echo <COMMAND> #顯示命令(<COMMAND>)
+    $ echo <SCRIPT> #顯示命令(<SCRIPT>)
     ```
 5. Tilde expansion
     ```bash
@@ -275,8 +275,8 @@
     ```
 8. Command substitution
     ```bash
-    $ echo $(<COMMAND>) #顯示命令(<COMMAND>)替換的結果
-    $ echo today is $(date +%A) #顯示命令(date +%A)替換的結果
+    $ echo $(<SCRIPT>) #顯示指令(<SCRIPT>)替換的結果
+    $ echo today is $(date +%A) #顯示指令(date +%A)替換的結果
     ```
 9. Which (which)
     ```bash

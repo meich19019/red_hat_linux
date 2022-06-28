@@ -16,7 +16,7 @@
     ```
 5. Manual pages (man)
     ```bash
-    $ man <COMMAND> #查看指令(<COMMAND>)詳細資訊，常見符號有[]選項、<>必填、...可多個、|選項
+    $ man <COMMAND> #查看命令(<COMMAND>)詳細資訊，常見符號有[]選項、<>必填、...可多個、|選項
     ```
 ### Shell Basics
 1. User modify (usermod)

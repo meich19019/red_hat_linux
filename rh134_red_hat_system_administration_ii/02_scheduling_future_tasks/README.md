@@ -5,17 +5,17 @@
     單次排程內容存放在`/var/spool/at`。
     ```bash
     $ at <DATETIME>
-    at> <SCRIPTS>
+    at> <SCRIPT>
     Ctrl+D
     $ at now+1min
     at> date >> /tmp/job.txt
     Ctrl+D
     ```
     ```bash
-    $ at <DATETIME> < <SCRIPTS_FILE>
+    $ at <DATETIME> < <SCRIPT_FILE>
     ```
     ```bash
-    $ echo '<SCRIPTS>' | at <DATETIME>
+    $ echo '<SCRIPT>' | at <DATETIME>
     $ echo 'date >> /tmp/job.txt' | at now+5min
     ```
     ```bash

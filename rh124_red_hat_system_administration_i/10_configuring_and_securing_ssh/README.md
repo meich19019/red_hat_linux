@@ -9,7 +9,7 @@
     $ ssh <REMOTE_USER>@<REMOTE_HOST> #透過ssh以使用者(<REMOTE_USER>)遠端登入系統(<REMOTE_HOST>)
     ```
     ```bash
-    $ ssh <REMOTE_USER>@<REMOTE_HOST> <COMMAND>
+    $ ssh <REMOTE_USER>@<REMOTE_HOST> <SCRIPT>
     ```
 ### Identifying Remote Users
 1. Who and what (w)

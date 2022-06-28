@@ -4,11 +4,11 @@
 1. Manual pages (man)  
     查詢指令的檔案存放在`/usr/share/doc`，另外查詢指令的網址在[http://www.redhat.com/docs](https://www.redhat.com/docs)。
     ```bash
-    $ man <COMMAND> #查看指令(<COMMAND>)詳細資訊，常見符號有[]選項、<>必填、...可多個、|選項
+    $ man <COMMAND> #查看命令(<COMMAND>)詳細資訊，常見符號有[]選項、<>必填、...可多個、|選項
     $ man passwd
     ```
     ```bash
-    $ man <SECTION> <COMMAND> #查看指令(<COMMAND>)的指定章節(<SECTION>)
+    $ man <SECTION> <COMMAND> #查看命令(<COMMAND>)的指定章節(<SECTION>)
     $ man 5 passwd
     ```
 2. Print manual pages
@@ -38,17 +38,17 @@
 1. Searching for man pages by keyword
     ```bash
     $ mandb #初始化或手動更新索引快取資料庫
-    $ whatis <COMMAND> #查看指令(<COMMAND>)摘要
+    $ whatis <COMMAND> #查看命令(<COMMAND>)摘要
     $ man -k <KEYWORD> #查看包含關鍵字(<KEYWORD>)的指令摘要
     ```
 ## Reading Info Documentation
 ### Introducing GNU Info
 1. Pinfo (pinfo)
     ```bash
-    $ pinfo #用選項選擇查看指令及詳細資訊
+    $ pinfo #用選項選擇查看命令及詳細資訊
     ```
     ```bash
-    $ pinfo <COMMAND> #用選項查看指令(<COMMAND>)詳細資訊
+    $ pinfo <COMMAND> #用選項查看命令(<COMMAND>)詳細資訊
     ```
 ### Comparing GNU Info and Man Page Navigation
 1. Navigating pinfo

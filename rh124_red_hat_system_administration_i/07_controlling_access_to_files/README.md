@@ -48,14 +48,14 @@
 ### Changing File and Directory Permissions
 1. Change mode (chmod)
     ```bash
-    $ chmod <WHO><WHAT><WHICH> <FILE|DIRECTORY>
+    $ chmod <WHO><MATHEMATICAL_OPERATOR><PERMISSION> <FILE|DIRECTORY>
     $ chmod u+x <FILE|DIRECTORY>
     $ chmod go-rw <FILE|DIRECTORY>
     $ chmod a+w <FILE|DIRECTORY>
     $ chmod u-w,g+w-x,o=rwx <FILE|DIRECTORY>
     ```
     ```bash
-    $ chmod -R <WHO><WHAT><WHICH> <FILE|DIRECTORY>
+    $ chmod -R <WHO><MATHEMATICAL_OPERATOR><PERMISSION> <FILE|DIRECTORY>
     ```
     ```bash
     $ chmod <USER_NUMBER><GROUP_NUMBER><OTHER_NUMBER> <FILE|DIRECTORY>
