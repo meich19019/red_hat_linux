@@ -93,7 +93,6 @@
 3. `$ cat /etc/fstab`
     ```bash
     UUID=a8063676-44dd-409a-b584-68be2c9f5570   /           xfs     defaults    0 0
-    /dev/vda1                                   /mnt/data   xfs     defaults    0 0
     1                                           2           3       4           5 6
     ```
     1. 掛載裝置
@@ -104,14 +103,12 @@
         1. 0 不備份
         2. 1 備份
     6. 開機時是否使用fsck驗證檔案系統
-5. System control (systemctl)
+4. `$ vim /etc/fstab`
     ```bash
-    $ mount -a
+    UUID=a8063676-44dd-409a-b584-68be2c9f5570   /           xfs     defaults    0 0
+    /dev/vda1                                   /mnt/data   xfs     defaults    0 0
     ```
-    ```bash
-    $ systemctl daemon-reload
-    ```
-6. Partition backup and restore
+5. Partition backup and restore
     ```bash
     $ dd if=<DEVICE> of=<FILE> bs=<BLOCK_SIZE>
     $ dd if=/dev/vda1 of=/tmp/vda1.dd bs=2M
@@ -158,20 +155,19 @@
     $ swapon /dev/vdb2
     ```
     ```bash
+    $ swapon -v <DEVICE>
+    $ swapon -v /dev/vdb2
+    ```
+    ```bash
     $ swapon -a
     ```
-5. File system table (fstab)
-    檔案系統掛載存放在`/etc/fstab`。
-6. `$ cat /etc/fstab`
+5. Free (free)
+    ```bash
+    $ free
+    ```
+6. `$ vim /etc/fstab`
     ```bash
     UUID=39e2667a-9458-42fe-9665-c5c854605881   swap           swap     defaults    0 0
     UUID=cb7f71ca-ee82-430e-ad4b-7dda12632328   swap           swap     pri=10      0 0
-    ```
-7. System control (systemctl)
-    ```bash
-    $ swapon -a
-    ```
-    ```bash
-    $ systemctl daemon-reload
     ```
 ## Return to [RH134 Red Hat System Administration II](/rh134_red_hat_system_administration_ii/README.md)

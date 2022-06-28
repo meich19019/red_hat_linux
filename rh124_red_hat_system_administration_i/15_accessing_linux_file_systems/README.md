@@ -58,7 +58,8 @@
 ### Unmounting File Systems
 1. Unmount (umount)
     ```bash
-    $ umount <DIRECTORY>
+    $ umount <DEVICE|DIRECTORY>
+    $ umount /dev/vdb1
     $ umount /mnt/data
     ```
 2. List open files (lsof)
