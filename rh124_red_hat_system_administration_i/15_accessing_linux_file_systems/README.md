@@ -48,6 +48,9 @@
     ```
 2. Mount (mount)
     ```bash
+    $ mount
+    ```
+    ```bash
     $ mount <DEVICE> <DIRECTORY>
     $ mount /dev/vdb1 /mnt/data
     ```
