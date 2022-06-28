@@ -126,15 +126,15 @@
 ### Adding a network connection
 1. NetworkManager command-line interface (nmcli)
     ```bash
-    $ nmcli connection add con-name <CONNECTION_NAME> type <TYPE> ifname <NETWORK_INTERFACE>
+    $ nmcli connection add con-name <CONNECTION_NAME> type <NETWORK_TYPE> ifname <NETWORK_INTERFACE>
     $ nmcli connection add con-name "Wired connection 1" type ethernet ifname eth0
     ```
     ```bash
-    $ nmcli connection add con-name <CONNECTION_NAME> type <TYPE> ifname <NETWORK_INTERFACE> ipv4.method <IPV4_METHOD> ipv4.address <IPV4_ADDRESS>/<IPV4_SUBNET_MASK> ipv4.gateway <IPV4_GATEWAY>
+    $ nmcli connection add con-name <CONNECTION_NAME> type <NETWORK_TYPE> ifname <NETWORK_INTERFACE> ipv4.method <IPV4_METHOD> ipv4.address <IPV4_ADDRESS>/<IPV4_SUBNET_MASK> ipv4.gateway <IPV4_GATEWAY>
     $ nmcli connection add con-name "Wired connection 1" type ethernet ifname eth0 ipv4.method manual ipv4.address 192.168.1.100/24 ipv4.gateway 192.168.1.1
     ```
     ```bash
-    $ nmcli connection add con-name <CONNECTION_NAME> type <TYPE> ifname <NETWORK_INTERFACE> ipv6.method <IPV6_METHOD> ipv6.address <IPV6_ADDRESS>/<IPV6_SUBNET_MASK> ipv6.gateway <IPV6_GATEWAY> ipv4.method <IPV4_METHOD> ipv4.address <IPV4_ADDRESS>/<IPV4_SUBNET_MASK> ipv4.gateway <IPV4_GATEWAY>
+    $ nmcli connection add con-name <CONNECTION_NAME> type <NETWORK_TYPE> ifname <NETWORK_INTERFACE> ipv6.method <IPV6_METHOD> ipv6.address <IPV6_ADDRESS>/<IPV6_SUBNET_MASK> ipv6.gateway <IPV6_GATEWAY> ipv4.method <IPV4_METHOD> ipv4.address <IPV4_ADDRESS>/<IPV4_SUBNET_MASK> ipv4.gateway <IPV4_GATEWAY>
     $ nmcli connection add con-name "Wired connection 1" type ethernet ifname eth0 ipv6.method manual ipv6.address 2001:db8:0:1::c000:207/64 ipv6.gateway 2001:db8:0:1::1 ipv4.method manual ipv4.address 192.168.1.100/24 ipv4.gateway 192.168.1.1
     ```
 ### Controlling network connections

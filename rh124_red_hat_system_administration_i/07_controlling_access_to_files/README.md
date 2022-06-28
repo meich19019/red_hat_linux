@@ -92,14 +92,14 @@
     2. 目錄
 4. Change mode (chmod)
     ```bash
-    $ chmod <WHO><WHAT><WHICH> <FILE|DIRECTORY>
+    $ chmod <WHO><MATHEMATICAL_OPERATOR><PERMISSION> <FILE|DIRECTORY>
     $ chmod u+s <FILE|DIRECTORY>
     $ chmod g+s <FILE|DIRECTORY>
     $ chmod o+t <FILE|DIRECTORY>
     $ chmod u=rwxs,g=rs,o=xt <FILE|DIRECTORY>
     ```
     ```bash
-    $ chmod -R <WHO><WHAT><WHICH> <FILE|DIRECTORY>
+    $ chmod -R <WHO><MATHEMATICAL_OPERATOR><PERMISSION> <FILE|DIRECTORY>
     ```
     ```bash
     $ chmod <SPECIAL_NUMBER><USER_NUMBER><GROUP_NUMBER><OTHER_NUMBER> <FILE|DIRECTORY>

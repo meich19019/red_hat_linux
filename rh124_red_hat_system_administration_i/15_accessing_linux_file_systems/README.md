@@ -154,14 +154,14 @@
     $ find / -ctime -7
     ```
     ```bash
-    $ find <DIRECTORY> -type <TYPE>
+    $ find <DIRECTORY> -type <FILE_TYPE>
     $ find / -type f
     $ find / -type d
     $ find / -type l
     $ find / -type b
     ```
     ```bash
-    $ find <DIRECTORY> -type <TYPE> -links <COMPARISON_OPERATOR><NUMBER>
+    $ find <DIRECTORY> -type <FILE_TYPE> -links <COMPARISON_OPERATOR><NUMBER>
     $ find / -type f -links +1
     ```
 ## Return to [RH124 Red Hat System Administration I](/rh124_red_hat_system_administration_i/README.md)

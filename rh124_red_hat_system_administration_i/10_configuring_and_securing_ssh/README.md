@@ -31,7 +31,7 @@
     $ ssh-keygen
     ```
     ```bash
-    $ ssh-keygen -t <TYPE>
+    $ ssh-keygen -t <ENCRYPTION_TYPE>
     $ ssh-keygen -t rsa
     ```
     ```bash
