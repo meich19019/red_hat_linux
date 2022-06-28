@@ -80,7 +80,7 @@
     $ locate -i <KEYWORD>
     ```
     ```bash
-    $ locate -r <KEYWORD>
+    $ locate -r <REGEX_KEYWORD>
     ```
     ```bash
     $ locate -n <NUMBER> <KEYWORD>

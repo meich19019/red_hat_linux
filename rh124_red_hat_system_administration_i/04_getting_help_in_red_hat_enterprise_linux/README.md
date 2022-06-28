@@ -26,8 +26,8 @@
         移至頁首。
     4. `G`  
         移至頁尾。
-    5. `/<STRING>`  
-        向下查詢字串(`<STRING>`)。
+    5. `/<REGEX_KEYWORD>`  
+        向下查詢正規表達式關鍵字(`<REGEX_KEYWORD>`)。
     6. `n`  
         向下查看查詢結果。
     7. `N`  
@@ -56,8 +56,8 @@
         向下捲動一個視窗。
     2. `b`  
         向上捲動一個視窗。
-    3. `/<STRING>`  
-        向下查詢字串(`<STRING>`)。
+    3. `/<REGEX_KEYWORD>`  
+        向下查詢正規表達式關鍵字(`<REGEX_KEYWORD>`)。
     4. `q`  
         離開。
 ## Return to [RH124 Red Hat System Administration I](/rh124_red_hat_system_administration_i/README.md)

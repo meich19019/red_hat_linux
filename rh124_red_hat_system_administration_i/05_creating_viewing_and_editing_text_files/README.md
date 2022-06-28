@@ -101,8 +101,8 @@
         上一步。
     17. `Ctrl`+`r`  
         下一步。
-    18. `/<STRING>`  
-        向下查詢字串(`<STRING>`)。
+    18. `/<REGEX_KEYWORD>`  
+        向下查詢正規表達式關鍵字(`<REGEX_KEYWORD>`)。
     19. `n`  
         向下查看查詢結果。
     20. `N`  
@@ -118,8 +118,8 @@
         離開。
     4. `:q!`  
         強制離開。
-    5. `:1,$s/<STRING>/<NEW_STRING>/g`  
-        以正規表達式搜尋字串(`<STRING>`)用新字串(`<NEW_STRING>`)取代。
+    5. `:1,$s/<REGEX_KEYWORD>/<STRING>/g`  
+        查詢正規表達式關鍵字(`<REGEX_KEYWORD>`)用字串(`<STRING>`)取代。
 5. Edit mode 編輯模式
     1. `i` (insert)  
         進入編輯模式，游標前方插入字元。
