@@ -157,6 +157,9 @@
     ```bash
     $ sealert -l 613ca624-248d-48a2-a7d9-d28f5bbe2763
     ```
+    ```bash
+    $ sealert -a /var/log/audit/audit.log
+    ```
 4. Audit log search (ausearch)
     ```bash
     $ ausearch -m AVC -ts recent

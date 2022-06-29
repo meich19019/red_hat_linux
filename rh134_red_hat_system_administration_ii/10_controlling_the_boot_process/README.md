@@ -1,6 +1,6 @@
 # 10 Controlling the Boot Process
 ## Selecting the Boot Target
-### Describing the Red Hat Enterprice Linux 8 Boot Process
+### Describing the Red Hat Enterprise Linux 8 Boot Process
 ### Rebooting and Shutting Down
 1. System control (systemctl)
     ```bash
@@ -49,19 +49,19 @@
 7. Press `Ctrl+x` to boot with the changes
 8. Remount `/sysroot` as read/write
     ```bash
-    switch_root:/\# mount -o remount,rw /sysroot
+    switch_root# mount -o remount,rw /sysroot
     ```
 9. Switch into a `chroot` jail, where `/sysroot` is treated as the root of the file-system tree
     ```bash
-    switch_root:/\# chroot /sysroot
+    switch_root# chroot /sysroot
     ```
 10. Set a new root password
     ```bash
-    sh-4.4\# passwd
+    sh-4.4# passwd
     ```
 11. Make sure that all unlabeled files, including `/etc/shadow` at this point, get relabeled during boot
     ```bash
-    sh-4.4\# touch /.autorelabel
+    sh-4.4# touch /.autorelabel
     ```
 12. Type `exit` twice
 ### Inspecting Logs
